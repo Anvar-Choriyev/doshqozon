@@ -37,11 +37,16 @@
 	justify-content: center;
 }
 .right-page-main-content {
+	
 	flex: 1;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	max-width: 450px;
+	max-width: 460px;
+	
+}
+label{
+	display: flex;
 }
 .right-page-main-content h1 {
 	max-width: 212px;
@@ -57,17 +62,18 @@ form {
 	width: 100%;
 }
 .right-page-main-content input {
-vertical-align: middle;
-	margin-bottom: 30px;
-padding: 10px 15px 10px 25px;
+	width: 100%;
+	margin-top:.5rem;
+	margin-bottom: 20px;
+padding: 10px;
 background: #FAFAFA;
 border: 1px solid #D9DCDD;
 border-radius: 4px;
 outline: none;
 font-weight: 400;
 font-size: 18px;
-line-height: 24px;
-width: 100%;
+/* line-height: 24px; */
+/* width: 100%; */
 }
 p {
 	font-size: 16px;
@@ -85,14 +91,22 @@ p {
 	line-height: 24px;
 	color: #0e1427;
 }
-.changeType > div {
+.changeType {
 	position: absolute;
 	cursor: pointer;
-	transform: translate(60%, 40%);
+	transform: translate(60%, 70%);
 	display: inline-block;
 	
 }
-
+.buttonLogin{
+	width: 105%;
+	
+padding: 20px 30px;
+background: #FEBB1B;
+border: none;
+cursor: pointer;
+border-radius: 4px;
+}
 @media (max-width: 75rem) {
 	.container {
 		display: block;

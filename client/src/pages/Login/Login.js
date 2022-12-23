@@ -44,17 +44,14 @@ function Login() {
 			</div>
 			<div className={styles["right-page"]}>
 				<div className={styles["right-page-main-content"]}>
-					<h1>Tizimga Kirish</h1>
+					<h1>Sign Up</h1>
 					<form onSubmit={
 						// handleSubmit(login)
 					()=>{}	}>
 						<div>
 							<label htmlFor="username">
-								<div className={styles.spandiv}>
-									{/* <span className={styles["input-name"]}>Username </span> */}
-									
-								</div>
-								Username
+								Login
+							</label>
 								<input
 									// style={{ borderBottom: errors.username && "1px solid red" }}
 									type="text"
@@ -62,22 +59,22 @@ function Login() {
 									name="username"
 									// {...register("username")}
 								/>
-							</label>
 							{/* {errors.username && (
 								<p style={{ color: "red" }}>{errors.username.message}</p>
 							)} */}
 						</div>
 						<div className={styles.password}>
 							<label htmlFor="password">
-								<div className={styles.spandiv}>
-									{/* <span className={styles["input-name"]}>Parol</span> */}
+                                Parol
+							</label>
+							<div>
+							<div className={styles.spandiv}>
 									<div className={styles.changeType}>
 										<div onClick={typeChangeHandler}>
 											<PasswordIcon />
 										</div>
 									</div>
 								</div>
-                               {/* Parol */}
 								<input
 									// style={{ borderBottom: errors.password && "1px solid red" }}
 									type={typeState ? "text" : "password"}
@@ -85,14 +82,15 @@ function Login() {
 									id="password"
 									// {...register("password")}
 								/>
-							</label>
+							</div>
+								
 							{/* {errors.password && (
 								<p style={{ color: "red" }}>{errors.password.message}</p>
 							)} */}
 						</div>
 						<div style={{ marginTop: "1rem" }}>
 
-							<button size="medium" name="btn" type="submit" >
+							<button className={styles.buttonLogin} type="submit" >
 								Kirish
 							</button>
 
