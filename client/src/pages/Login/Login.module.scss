@@ -65,7 +65,7 @@ form {
 	width: 100%;
 	margin-top:.5rem;
 	margin-bottom: 20px;
-padding: 10px;
+padding: 10px 20px 10px 20px;
 background: #FAFAFA;
 border: 1px solid #D9DCDD;
 border-radius: 4px;
@@ -73,7 +73,6 @@ outline: none;
 font-weight: 400;
 font-size: 18px;
 /* line-height: 24px; */
-/* width: 100%; */
 }
 p {
 	font-size: 16px;
@@ -94,12 +93,12 @@ p {
 .changeType {
 	position: absolute;
 	cursor: pointer;
-	transform: translate(60%, 70%);
+	transform: translate(-20%, 70%);
 	display: inline-block;
 	
 }
 .buttonLogin{
-	width: 105%;
+	width: 100%;
 	
 padding: 20px 30px;
 background: #FEBB1B;

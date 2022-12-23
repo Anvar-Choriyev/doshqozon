@@ -1,0 +1,21 @@
+.title{
+	font-size: 40px;
+	font-weight: 600;
+	line-height: calc(60/40);
+}
+.subtitle{
+	font-size: 20px;
+	font-weight: 500;
+	line-height: calc(24/20);
+}
+.main-text{
+	font-size: 16px;
+	font-weight: 400;
+	line-height: calc(24/16);
+}
+.light{
+	color:$dark-gray;
+}
+.active{
+	background-color:$secondary;
+}
