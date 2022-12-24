@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.css"
+import styles from "./Navbar.module.scss"
 import ArrowBtn from "../../../assets/icons/ArrowBtn"
 import Vector from "../../../assets/icons/Vector";
 import Bell from "../../../assets/icons/Bell";
@@ -12,16 +12,16 @@ const Navbar = () => {
                 <div className={styles.arrowBtn}>
                     <ArrowBtn/>
                 </div>
-                <p>Food & Drinks</p>
+                <p className={`subtitle ${styles.menuTitle}`}>Taomnoma</p>
                 <Vector/>
-                <p>Categories</p>
+                <p className="subtitle">Kategoriyalar</p>
             </div>
             <div className={styles.menuControl}>
                 <Bell/>
                 <Time/>
                 <div className={styles.search}>
                     <Search/>
-                    <input type="text" placeholder={"Search..."} />
+                    <input className="main-text" type="text" placeholder={"Search..."} />
                 </div>
             </div>
         </div>

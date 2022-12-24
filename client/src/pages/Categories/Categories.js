@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout/Layout";
-import styles from "./Categories.module.css"
+import styles from "./Categories.module.scss"
 import Meals from "../../assets/images/meals.png"
 import Bread from "../../assets/images/bread.png"
 import Salad from "../../assets/images/salad.png"
@@ -11,27 +11,30 @@ const Categories = () => {
         <>
             <Layout/>
             <div className={styles.container}>
-                <p className={styles.categoryText}>Categories</p>
+                <div className={styles.mainText}>
+                    <p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
+                    <button className={`main-text ${styles.charge}`}>Charge customer</button>
+                </div>
                 <div className={styles.categories}>
                     <div className={styles.categoryBox}>
                         <img src={Meals} />
-                        <p>Taomlar</p>
+                        <p className="name-text">Taomlar</p>
                     </div>
                     <div className={styles.categoryBox}>
                         <img src={Bread} />
-                        <p>Non</p>
+                        <p className="name-text">Non</p>
                     </div>
                     <div className={styles.categoryBox}>
                         <img src={Salad} />
-                        <p>Salatlar</p>
+                        <p className="name-text">Salatlar</p>
                     </div>
                     <div className={styles.categoryBox}>
                         <img src={HotDrinks} />
-                        <p>Qaynoq ichimliklar</p>
+                        <p className="name-text">Qaynoq ichimliklar</p>
                     </div>
                     <div className={styles.categoryBox}>
                         <img src={ColdDrinks} />
-                        <p>Salqin ichimliklar</p>
+                        <p className="name-text">Salqin ichimliklar</p>
                     </div>
                 </div>
             </div>
