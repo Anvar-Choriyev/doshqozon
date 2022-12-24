@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
 import Sidebar from "./components/Sidebar/Sidebar";
 import navbar from "./utils/navbar";
 
@@ -13,6 +12,7 @@ function App() {
 				<Route path='*' element={<h1>Not Found 404</h1>} />
 			</Routes>
 		</BrowserRouter>
+
 	);
 }
 
