@@ -4,13 +4,18 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "sdw": "set NODE_ENV=dev&&nodemon server.js",
+    "spw": "set NODE_ENV=prod&&node server.js",
+    "sdl": "NODE_ENV=dev nodemon server.js",
+    "spl": "NODE_ENV=prod node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "docx": "^7.8.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",

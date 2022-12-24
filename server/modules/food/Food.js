@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../../core/config/database/database");
 
 const Category = sequelize.define(
-  "food",
+  "foods",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ const Category = sequelize.define(
       allowNull: false,
     },
     price: {
-      DataTypes: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
