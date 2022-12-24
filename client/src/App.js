@@ -1,4 +1,3 @@
-import './App.css';
 import Categories from './pages/Categories/Categories';
 import {Routes, Route} from "react-router-dom"
 import Login from "./pages/Login/Login";
