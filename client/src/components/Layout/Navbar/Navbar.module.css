@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+.arrowBtn {
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+    background-color: var(--primary-color);
+    border-radius: 0.4rem;
+    margin: 4rem 2rem;
+}
+.menuText {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    gap: 2.4rem;
+    color: var(--main-text-color);
+}
+.menuText p:first-child{
+    color: var(--primary-text-color);
+}
+.menuControl {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+.search {
+    width: 33.5rem;
+    padding: 1.2rem;
+    border-radius: 0.4rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.search input {
+    width: 100%;
+    margin-left: 1.7rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
