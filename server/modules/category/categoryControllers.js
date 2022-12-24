@@ -4,7 +4,9 @@ const Food = require("../food/Food");
 const { Op } = require("sequelize");
 exports.getAllCategory = catchAsync(
   async (req, res, next) => {
-    const allCategories = await Category.findAndCountAll();
+    const allCategories = await Category.findAndCountAll({
+      where: { id: { [Op.in]: [1, 2, 3, 4, 5] } },
+    });
 
     res.json({
       status: "succes",
