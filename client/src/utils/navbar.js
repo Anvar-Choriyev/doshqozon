@@ -1,4 +1,5 @@
-import useId from "../hooks/useId";
+import useId from '../hooks/useId';
+
 
 // compnents
 import Asosiy from "../pages/Asosiy/Asosiy";
