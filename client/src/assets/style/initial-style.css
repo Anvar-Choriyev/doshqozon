@@ -3,13 +3,15 @@
 	margin:0;
 	box-sizing: inherit;
 }
+
 a{
 	text-decoration: none;
-	&:focus, &:active{
-		outline:none;
-	}
 	color:inherit;
 }
+a:focus, a:active{
+	outline:none;
+}
+
 img{vertical-align: top;}
 
 input,button,textarea,iframe{
@@ -17,22 +19,20 @@ input,button,textarea,iframe{
 	border:none;
 	outline:none;
 }
-input{
-	&::placeholder{
+input::placeholder{
 		color:inherit;
-	}
-	&::-ms-clear{
-		display: none;
-	}
+}
+input::-ms-clear{
+	display: none;
 }
 button{
 	cursor: pointer;
 	background:transparent;
 	color:inherit;
-	&::-moz-focus-inner{
-		padding:0;
-		border:0;
-	}
+}
+button::-moz-focus-inner{
+	padding:0;
+	border:0;
 }
 
 ul{list-style: none;}
@@ -47,7 +47,7 @@ body{
 	font-family: 'Poppins';
 	box-sizing:border-box;
 	border:none;
-	color:$primary;
+	color:var(--color_1);
 }
 
 #root{

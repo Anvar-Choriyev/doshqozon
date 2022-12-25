@@ -33,7 +33,7 @@ function Login() {
 		setTypeState(!typeState);
 	};
 	const login = async (data) => {
-	    console.log(data)
+		console.log(data)
 	};
 
 	return (
@@ -64,10 +64,10 @@ function Login() {
 						</div>
 						<div className={styles.password}>
 							<label htmlFor="password">
-                                Parol
+								Parol
 							</label>
 							<div>
-							<div className={styles.spandiv}>
+								<div className={styles.spandiv}>
 									<div className={styles.changeType}>
 										<div onClick={typeChangeHandler}>
 											<PasswordIcon />
