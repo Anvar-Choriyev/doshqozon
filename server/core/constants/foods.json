@@ -1,0 +1,49 @@
+[
+    {
+       "id": 1,
+        "name": "Andijon oshi",
+        "price": 28000 ,
+        "categoryId": 1
+    },
+    {
+        "id": 2,
+         "name": "Andijon oshi", 
+         "price": 60000,
+         "categoryId": 1 
+     },
+     {
+        "id": 3,
+         "name": "Toshkent to`y oshi",
+         "price": 55000 ,
+         "categoryId": 1
+     },
+     {
+        "id": 4,
+         "name": "Toshkent to`y oshi",
+         "price": 22000 ,
+         "categoryId": 1
+     },
+     {
+        "id": 5,
+         "name": "Tuxum", 
+         "price":  1000,
+         "categoryId": 6
+     },
+     {
+        "id": 6,
+         "name": "Qazi", 
+         "price":  4000,
+         "categoryId": 6
+     },
+     {
+        "id": 7,
+         "name": "Po`stdumba", 
+         "price":  4000,
+         "categoryId": 6
+     },
+     {
+        "id": 8,
+         "name": "Til", 
+         "price":  5000,
+         "categoryId": 6
+     }]
