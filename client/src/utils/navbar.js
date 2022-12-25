@@ -1,38 +1,67 @@
 import useId from "../hooks/useId";
 
+// compnents
+import Asosiy from "../pages/Asosiy/Asosiy";
+import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
+import Taomnoma from "../pages/Taomnoma/Taomnoma";
+import Xisobot from "../pages/Xisobot/Xisobot";
+import Login from "../pages/Login/Login";
+
+// icons
+import DashboardIcon from "../assets/icons/DashboardIcon";
+
 const navbar = [
 	{
 		id: useId,
-		element: <h1>Asosiy</h1>,
+		element: <Asosiy />,
 		title: 'Asosiy',
-		path: '/home',
+		path: '/',
+		icon(type) {
+			return <DashboardIcon type={type} />
+		},
 		private: true,
 		hidden: false,
-		active: true,
 	},
 	{
 		id: useId,
-		element: <h1>Taomnoma</h1>,
+		element: <Taomnoma />,
 		title: 'Taomnoma',
 		path: '/taomnoma',
+		icon(type) {
+			return <DashboardIcon type={type} />
+		},
 		private: true,
 		hidden: false
 	},
 	{
 		id: useId,
-		element: <h1>Xisobot</h1>,
+		element: <Xisobot />,
 		title: 'Xisobot',
 		path: '/xisobot',
+		icon(type) {
+			return <DashboardIcon type={type} />
+		},
 		private: true,
 		hidden: false
 	},
 	{
 		id: useId,
-		element: <h1>Sozlamalar</h1>,
+		element: <Sozlamalar />,
 		title: 'Sozlamalar',
 		path: '/sozlamalar',
+		icon(type) {
+			return <DashboardIcon type={type} />
+		},
 		private: true,
 		hidden: false
+	},
+	{
+		id: useId,
+		element: <Login />,
+		title: 'Login',
+		path: '/Login',
+		private: true,
+		hidden: true
 	},
 ]
 

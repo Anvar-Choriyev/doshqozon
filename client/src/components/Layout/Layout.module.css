@@ -1,0 +1,16 @@
+.layout{
+	flex:1 1 auto;
+	display:flex;
+	height: 100vh;
+}
+.layout__right{
+	flex:1 1 auto;
+	display: flex;
+	flex-direction:column;
+	padding:40px 20px;
+}
+
+.layout__child {
+	overflow-y:auto;
+	flex:1 1 auto;
+}

@@ -1,41 +1,36 @@
-import styles from './Sidebar.module.scss';
-import DASHBOARD_LIGHT from '../../assets/images/icons/dashboard-light.svg'
-import DASHBOARD_DARK from '../../assets/images/icons/dashboard-dark.svg'
-import USER from '../../assets/images/img/user.jpg';
+import styles from './Sidebar.module.css';
+import USER from '../../assets/images/user.jpg';
 
-import { Link } from 'react-router-dom';
-import navbar from '../../utils/navbar';
+import { useLocation, useNavigate } from 'react-router-dom';
+import SidebarList from './SidebarList';
 
-const Sidebar = () => {
+
+const Sidebar = ({ list }) => {
+	const navigate = useNavigate();
+	const location = useLocation();
+
+
+	function goToLogin() {
+		navigate('/login');
+	}
 	return (
-		<aside className={styles.sidebar}>
-			<nav className={styles['sidebar__menu']}>
-				<ul className={styles['sidebar__list']}>
-					{navbar.map(({ id, path, element, title, active }) =>
-						<li key={id()} className={styles['sidebar__item']}>
-							<Link
-								to={path}
-								element={element}
-								className={`subtitle ${styles['sidebar__link']} ${({ isActive }) => console.log(isActive)}`}
-							>
-								<img src={active ? DASHBOARD_DARK : DASHBOARD_LIGHT} ale={'icon'} />
-								<span>{title}</span>
-							</Link>
-						</li>
-					)}
+		<aside className={styles['aside']}>
+			<nav className={styles['aside__menu']}>
+				<ul className={styles['aside__list']}>
+					<SidebarList list={list} styles={styles} location={location} />
 				</ul>
 			</nav>
-			<div className={`${styles["sidebar__user"]} ${styles['user-sidebar']}`}>
-				<div className={styles["user-sidebar__pic"]}>
+			<div className={styles["aside__user"]}>
+				<div className={styles["aside__user-pic"]}>
 					<img src={USER} alt='' />
 				</div>
-				<h3 className={styles["user-sidebar__title"]}>
+				<h3 className={styles["aside__user-title"]}>
 					Elbek Suyunov
 				</h3>
-				<p className={styles["user-sidebar__desc"]}>
+				<p className={`main-text ${styles["aside__user-desc"]}`}>
 					Waiter 4h 46m
 				</p>
-				<button className={styles["user-sidebar__btn"]}>
+				<button className={`main-text ${styles["aside__user-btn"]}`} onClick={goToLogin}>
 					Open profile
 				</button>
 			</div>

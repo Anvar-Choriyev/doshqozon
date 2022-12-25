@@ -14,8 +14,8 @@
 	line-height: calc(24/16);
 }
 .light{
-	color:$dark-gray;
+	color:var(--color_4);
 }
 .active{
-	background-color:$secondary;
+	background-color:var(--color_2);
 }
