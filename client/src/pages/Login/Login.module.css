@@ -99,12 +99,11 @@ p {
 }
 .buttonLogin{
 	width: 100%;
-	
-padding: 20px 30px;
-background: #FEBB1B;
-border: none;
-cursor: pointer;
-border-radius: 4px;
+	padding: 20px 30px;
+	background: #FEBB1B;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
 }
 @media (max-width: 75rem) {
 	.container {
