@@ -13,8 +13,13 @@
 	font-weight: 400;
 	line-height: calc(24/16);
 }
+.name-text {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: calc(36/24);
+}
 .light{
-	color:$dark-gray;
+	color:$text-color;
 }
 .active{
 	background-color:$secondary;
