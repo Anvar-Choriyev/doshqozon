@@ -1,0 +1,39 @@
+@import "../../../assets/style/variables.scss";
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+.arrowBtn {
+    padding: 12px;
+    background-color: $main-color;
+    border-radius: 4px;
+    margin: 40px 20px;
+}
+.menuText {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: $primary;
+}
+.menuTitle{
+    color: $text-color;
+}
+.menuControl {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.search {
+    width: 335px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+}
+.search input {
+    width: 100%;
+    margin-left: 17px;
+    background-color: inherit;
+}

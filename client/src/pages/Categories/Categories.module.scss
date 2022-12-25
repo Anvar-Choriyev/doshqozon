@@ -1,0 +1,38 @@
+@import "../../assets/style/variables.scss";
+
+.container {
+    width: 78%;
+    margin: 0 auto;
+}
+.mainText {
+    display: flex;
+    justify-content: space-between;
+}
+.charge {
+    width: 206px;
+    height: 48px;
+    color: $primary;
+    padding: 12px 32px;
+    background-color: $main-color;
+    border-radius: 4px;
+}
+.categoryText {
+    color: $primary;
+    margin-bottom: 24px;
+}
+.categories {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+.categoryBox {
+    width: 335px;
+    height: 216px;
+    border-radius: 4px;
+    background-color: $main-color;
+    padding: 24px 107.5px 72px;
+    text-align: center;
+}
+.categoryBox p {
+    color: #000;
+}
