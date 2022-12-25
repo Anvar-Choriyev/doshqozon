@@ -13,14 +13,14 @@
 	font-weight: 400;
 	line-height: calc(24/16);
 }
-.name-text {
+.name-text{
 	font-size: 24px;
 	font-weight: 500;
 	line-height: calc(36/24);
 }
 .light{
-	color:$text-color;
+	color:var(--color_3);
 }
 .active{
-	background-color:$secondary;
+	background-color:var(--color_1) !important;
 }

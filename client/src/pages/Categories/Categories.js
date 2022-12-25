@@ -1,5 +1,5 @@
+import styles from "./Categories.module.css"
 import Layout from "../../components/Layout/Layout";
-import styles from "./Categories.module.scss"
 import Meals from "../../assets/images/meals.png"
 import Bread from "../../assets/images/bread.png"
 import Salad from "../../assets/images/salad.png"

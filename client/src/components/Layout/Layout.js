@@ -1,5 +1,5 @@
 import Navbar from "./Navbar/Navbar";
-import styles from "./Layout.module.scss"
+import styles from "./Layout.module.css"
 
 const Layout = (props) => {
     return ( 

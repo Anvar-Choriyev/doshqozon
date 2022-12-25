@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.scss"
+import styles from "./Navbar.module.css"
 import ArrowBtn from "../../../assets/icons/ArrowBtn"
 import Vector from "../../../assets/icons/Vector";
 import Bell from "../../../assets/icons/Bell";
