@@ -43,18 +43,20 @@
 	flex-direction: column;
 	max-width: 460px;
 }
+
+ .right-page-main-content h1 {
+ 	max-width: 212px;
+ 	max-height: 39px;
+ 	font-weight: 500;
+ 	font-size: 28px;
+ 	line-height: 39px;
+ 	color: #0e1427;
+ 	text-align: center;
+ 	margin-bottom: 20px;
+ }
+
 label{
 	display: flex;
-}
-.right-page-main-content h1 {
-	max-width: 212px;
-	max-height: 39px;
-	font-weight: 500;
-	font-size: 28px;
-	line-height: 39px;
-	color: #0e1427;
-	text-align: center;
-	margin-bottom: 20px;
 }
 form {
 	width: 100%;

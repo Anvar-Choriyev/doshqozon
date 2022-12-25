@@ -1,8 +1,8 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 // import { useForm } from "react-hook-form";
 // import * as yup from "yup";
 // import { yupResolver } from "@hookform/resolvers/yup";
-import styles from "./Login.module.scss";
+import styles from "./Login.module.css";
 // import UsernameIcon from "../../assets/icons/UsernameIcon";
 import LoginMainIcon from "../../assets/icons/LoginMainIcon";
 import PasswordIcon from "../../assets/icons/PasswordIcon";
@@ -34,7 +34,7 @@ function Login() {
 		setTypeState(!typeState);
 	};
 	const login = async (data) => {
-	    console.log(data)
+		console.log(data)
 	};
 
 	return (
@@ -47,28 +47,28 @@ function Login() {
 					<h1>Sign Up</h1>
 					<form onSubmit={
 						// handleSubmit(login)
-					()=>{}	}>
+						() => { }}>
 						<div>
 							<label htmlFor="username">
 								Login
 							</label>
-								<input
-									// style={{ borderBottom: errors.username && "1px solid red" }}
-									type="text"
-									id="username"
-									name="username"
-									// {...register("username")}
-								/>
+							<input
+								// style={{ borderBottom: errors.username && "1px solid red" }}
+								type="text"
+								id="username"
+								name="username"
+							// {...register("username")}
+							/>
 							{/* {errors.username && (
 								<p style={{ color: "red" }}>{errors.username.message}</p>
 							)} */}
 						</div>
 						<div className={styles.password}>
 							<label htmlFor="password">
-                                Parol
+								Parol
 							</label>
 							<div>
-							<div className={styles.spandiv}>
+								<div className={styles.spandiv}>
 									<div className={styles.changeType}>
 										<div onClick={typeChangeHandler}>
 											<PasswordIcon />
@@ -80,10 +80,10 @@ function Login() {
 									type={typeState ? "text" : "password"}
 									name="password"
 									id="password"
-									// {...register("password")}
+								// {...register("password")}
 								/>
 							</div>
-								
+
 							{/* {errors.password && (
 								<p style={{ color: "red" }}>{errors.password.message}</p>
 							)} */}

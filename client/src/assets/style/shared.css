@@ -19,8 +19,12 @@
 	line-height: calc(36/24);
 }
 .light{
+<<<<<<< HEAD:client/src/assets/style/shared.css
+	color:var(--color_4);
+=======
 	color:$text-color;
+>>>>>>> 334032799803342b58b1d8ee341b76e89e004fea:client/src/assets/style/shared.scss
 }
 .active{
-	background-color:$secondary;
+	background-color:var(--color_2);
 }
