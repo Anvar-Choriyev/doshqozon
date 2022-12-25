@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+dotenv.config();
 const nodeEnv = process.env.NODE_ENV;
 let envPath;
 if (nodeEnv === "dev") {
@@ -6,7 +7,7 @@ if (nodeEnv === "dev") {
 } else if (nodeEnv === "prod") {
 	envPath = ".env.prod";
 }
-dotenv.config({ path: `./${envPath}` });
+// dotenv.config({ path: `./${envPath}` });
 const app = require("../server/app");
 const db = require("../server/core/config/database/database");
 const PORT = process.env.PORT || 7070;
