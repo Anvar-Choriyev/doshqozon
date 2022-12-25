@@ -1,5 +1,5 @@
 const { compare } = require("bcrypt");
-const { jwt } = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 const AppError = require("../../core/utils/AppError");
 const User = require("../user/User");
 const catchAsync = require("../../core/utils/catchAsync");
@@ -47,7 +47,7 @@ exports.login = catchAsync(async (req, res, next) => {
 		userRole: candidate.userRole,
 	};
 
-	const token = await generateToken(payload, process.env.JWT_SECRET, {
+	const token = await generateToken(payload, `${process.env.JWT_SECRET}`, {
 		algorithm: "HS512",
 		expiresIn: "7d",
 	});

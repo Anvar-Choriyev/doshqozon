@@ -1,14 +1,12 @@
-import Login from "./pages/Login/Login";
-import Card from "./general/Card/Card"
-import ichimlik from "./assets/images/Qaynoq-ichimliklar.png";
-import Taomlar from "./assets/images/Taomlar.png";
-import Button from "./general/Button/Button"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import navbar from "./utils/navbar";
 
 function App() {
 	return (
-		<>
-			<Login />
-		</>
+		<Routes>
+			{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
+			<Route path='*' element={<Navigate to={'/'} />} />
+		</Routes>
 	);
 }
 
