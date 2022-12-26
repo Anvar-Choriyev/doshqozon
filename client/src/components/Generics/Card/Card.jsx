@@ -11,4 +11,4 @@ const Card = (props) => {
       <span className={styles["product-price"]}>{props["product-price"]}</span>
     </div>
   );
-};
+};    
