@@ -42,35 +42,11 @@
 }
 
 .right-page-main-content {
-<<<<<<< HEAD:client/src/pages/Login/Login.module.scss
-
-=======
->>>>>>> 54eb080bf61fcc0f48e53c4f29ffa4a0878b9915:client/src/pages/Login/Login.module.css
 	flex: 1;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	max-width: 460px;
-<<<<<<< HEAD:client/src/pages/Login/Login.module.scss
-
-}
-
-label {
-	display: flex;
-}
-
-.right-page-main-content h1 {
-	max-width: 212px;
-	max-height: 39px;
-	font-weight: 500;
-	font-size: 28px;
-	line-height: 39px;
-	color: #0e1427;
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-=======
 }
 
  .right-page-main-content h1 {
@@ -87,7 +63,6 @@ label {
 label{
 	display: flex;
 }
->>>>>>> 54eb080bf61fcc0f48e53c4f29ffa4a0878b9915:client/src/pages/Login/Login.module.css
 form {
 	width: 100%;
 }
@@ -103,11 +78,7 @@ form {
 	outline: none;
 	font-weight: 400;
 	font-size: 18px;
-<<<<<<< HEAD:client/src/pages/Login/Login.module.scss
-	/* line-height: 24px; */
-=======
 /* line-height: 24px; */
->>>>>>> 54eb080bf61fcc0f48e53c4f29ffa4a0878b9915:client/src/pages/Login/Login.module.css
 }
 
 p {
@@ -139,10 +110,6 @@ p {
 
 .buttonLogin {
 	width: 100%;
-<<<<<<< HEAD:client/src/pages/Login/Login.module.scss
-
-=======
->>>>>>> 54eb080bf61fcc0f48e53c4f29ffa4a0878b9915:client/src/pages/Login/Login.module.css
 	padding: 20px 30px;
 	background: #FEBB1B;
 	border: none;
