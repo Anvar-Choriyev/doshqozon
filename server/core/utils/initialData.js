@@ -24,7 +24,6 @@ module.exports = catchAsync(async () => {
 			},
 		},
 	});
-	console.log(adminCount, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 	if (adminCount === 0) {
 		const adminInfo = {
 			name: "Umarov Ali",
