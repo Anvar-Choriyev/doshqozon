@@ -1,12 +1,14 @@
 @import "../../assets/style/variables.scss";
 
 .container {
-    width: 78%;
-    margin: 0 auto;
+   //  width: 78%;
+   //  margin: 0 auto;
 }
 .mainText {
     display: flex;
     justify-content: space-between;
+	 align-items: center;
+    margin-bottom: 24px;
 }
 .charge {
     width: 206px;
@@ -18,21 +20,17 @@
 }
 .categoryText {
     color: $primary;
-    margin-bottom: 24px;
 }
-.categories {
-    display: flex;
-    gap: 23px;
-    flex-wrap: wrap;
-}
+.categories {}
+
 .categoryBox {
-    width: 335px;
-    height: 216px;
-    border-radius: 4px;
-    background-color: $main-color;
-    padding: 24px 107.5px 72px;
-    text-align: center;
+	border-radius: 4px;
+	background-color: $main-color;
+	padding: 24px 0;
+	text-align: center;
+	width: 100%;
 }
 .categoryBox p {
     color: #000;
 }
+

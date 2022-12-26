@@ -1,6 +1,5 @@
 import useId from '../hooks/useId';
 
-
 // compnents
 import Asosiy from "../pages/Asosiy/Asosiy";
 import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
@@ -10,6 +9,11 @@ import Login from "../pages/Login/Login";
 
 // icons
 import DashboardIcon from "../assets/icons/DashboardIcon";
+import PanIcon from "../assets/icons/PanIcon";
+import ChequeIcon from '../assets/icons/ChequeIcon';
+import SettingsIcon from '../assets/icons/SettingsIcons';
+
+
 
 const navbar = [
 	{
@@ -17,19 +21,30 @@ const navbar = [
 		element: <Asosiy />,
 		title: 'Asosiy',
 		path: '/',
-		icon(type) {
-			return <DashboardIcon type={type} />
+		icon(mode) {
+			return <DashboardIcon mode={mode} />
 		},
 		private: true,
 		hidden: false,
 	},
+	// {
+	// 	id: useId,
+	// 	element: <Taomnoma />,
+	// 	title: 'Taomnoma',
+	// 	path: '/taomnoma',
+	// 	icon(mode) {
+	// 		return <PanIcon mode={mode} />
+	// 	},
+	// 	private: true,
+	// 	hidden: false
+	// },
 	{
 		id: useId,
-		element: <Taomnoma />,
-		title: 'Taomnoma',
-		path: '/taomnoma',
-		icon(type) {
-			return <DashboardIcon type={type} />
+		element: <Sozlamalar />,
+		title: 'Sozlamalar',
+		path: '/sozlamalar',
+		icon(mode) {
+			return <SettingsIcon mode={mode} />
 		},
 		private: true,
 		hidden: false
@@ -39,19 +54,8 @@ const navbar = [
 		element: <Xisobot />,
 		title: 'Xisobot',
 		path: '/xisobot',
-		icon(type) {
-			return <DashboardIcon type={type} />
-		},
-		private: true,
-		hidden: false
-	},
-	{
-		id: useId,
-		element: <Sozlamalar />,
-		title: 'Sozlamalar',
-		path: '/sozlamalar',
-		icon(type) {
-			return <DashboardIcon type={type} />
+		icon(mode) {
+			return <ChequeIcon mode={mode} />
 		},
 		private: true,
 		hidden: false

@@ -1,9 +1,9 @@
 .aside{
-	flex:0 0 315px;
+	flex:0 0 auto;
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
-
+	
 	background-color:var(--color_3);
 	padding:20px;
 }
@@ -52,5 +52,11 @@
 @media(min-height:885px) {
 	.aside{
 		padding:100px 20px 160px 20px;
+	}
+}
+
+@media(min-width:1085px) {
+	.aside{
+		flex:0 0 355px;
 	}
 }
