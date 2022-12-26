@@ -29,7 +29,7 @@ exports.getAllFoodsbyCategory = catchAsync(
       status: "succes",
       message: `Kategoriyaga tegishli taomlar`,
       error: null,
-      data: { ...allFoodsbyCategory.rows },
+      data: [...allFoodsbyCategory.rows] ,
     });
   }
 );
