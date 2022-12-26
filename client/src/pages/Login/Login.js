@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import styles from "./Login.module.scss";
+import styles from "./Login.module.css";
 import LoginMainIcon from "../../assets/icons/LoginMainIcon";
 import PasswordIcon from "../../assets/icons/PasswordIcon";
 const schema = yup.object().shape({
