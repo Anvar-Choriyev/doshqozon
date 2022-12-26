@@ -1,15 +1,12 @@
-import Categories from './pages/Categories/Categories';
-import {Routes, Route} from "react-router-dom"
-import Login from "./pages/Login/Login";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import navbar from "./utils/navbar";
 
 function App() {
-  return (
-		<>
-    <Routes>
-        <Route path="/" element={<Login/>} />
-        <Route path="/categories" element={<Categories/>} />
-    </Routes>
-		</>
+	return (
+		<Routes>
+			{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
+			<Route path='*' element={<Navigate to={'/'} />} />
+		</Routes>
 	);
 }
 

@@ -19,8 +19,8 @@
 	line-height: calc(36/24);
 }
 .light{
-	color:var(--color_3);
+	color:var(--color_4);
 }
 .active{
-	background-color:var(--color_1) !important;
+	background-color:var(--color_2);
 }
