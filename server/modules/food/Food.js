@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../core/config/database/database");
 
-const Category = sequelize.define(
+const Food = sequelize.define(
   "foods",
   {
     id: {
@@ -23,4 +23,4 @@ const Category = sequelize.define(
   }
 );
 
-module.exports = Category;
+module.exports = Food;
