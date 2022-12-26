@@ -7,6 +7,7 @@ import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
 import Taomnoma from "../pages/Taomnoma/Taomnoma";
 import Xisobot from "../pages/Xisobot/Xisobot";
 import Login from "../pages/Login/Login";
+import Categories from "../pages/Categories/Categories";
 
 // icons
 import DashboardIcon from "../assets/icons/DashboardIcon";

@@ -1,0 +1,99 @@
+.container {
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+}
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding:8px;
+}
+.itemChange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.imgDiv{
+  display: flex;
+  justify-content: center;align-items: center;
+  gap: 24px;
+}
+p{
+  text-align: center;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+color: #000000;
+}
+.pText{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height */
+
+/* 4 */
+
+color: #9A9B9F;
+}
+.pSum{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 45px;
+/* identical to box height */
+
+/* 1 */
+
+color: #FEBB1B;
+}
+.buttonMinus{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px;
+gap: 10px;
+
+width: 48px;
+height: 48px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+
+background: #F8F8F7;
+border-radius: 4px;
+}
+.buttonPlus{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px;
+gap: 10px;
+
+width: 48px;
+height: 48px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+background: #FEBB1B;
+border-radius: 4px;
+}

@@ -24,6 +24,10 @@ const errorController = (err, req, res, next) => {
 		console.log(err);
 		console.log(err.stack);
 		console.log(err.message);
+		res.status(err.statusCode).json({
+			status: err.status,
+			message: err.message,
+		});
 		sendErrorDev(err, res);
 	} else if (process.env.NODE_ENV === "prod") {
 		res.status(err.statusCode).json({

@@ -35,7 +35,14 @@ exports.login = catchAsync(async (req, res, next) => {
 	const { username, password } = req.body;
 	const candidate = await findByUsername(username);
 	if (!candidate) {
-		return next(new AppError("Login yoki parol xato", 400));
+		return next(
+			new AppError(
+				`${res.status(400).send({
+					message: "Login yoki parol xato",
+				})}`,
+				400
+			)
+		);
 	}
 	const passwordIsMatch = await compare(password, candidate.password);
 	if (!passwordIsMatch) {
