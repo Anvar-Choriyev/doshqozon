@@ -12,7 +12,7 @@ exports.getAllCategory = catchAsync(
       status: "succes",
       message: "Barcha kategoriyalar",
       error: null,
-      data: { ...allCategories.rows },
+      data: allCategories.rows,
     });
   }
 );
