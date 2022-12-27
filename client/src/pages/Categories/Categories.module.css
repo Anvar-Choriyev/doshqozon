@@ -17,18 +17,16 @@
     margin-bottom: 24px;
 }
 .categories {
-    display: flex;
-    gap: 23px;
-    flex-wrap: wrap;
 }
 .categories {}
 
 .categoryBox {
-    width: 335px;
     height: 216px;
     border-radius: 4px;
     background-color: var(--color_3);
-    padding: 24px 107.5px 72px;
+	 display: grid;
+	 place-items:center;
+    /* padding: 24px 107.5px 72px; */
     text-align: center;
 }
 .categoryBox p {

@@ -63,7 +63,7 @@ const Categories = () => {
 					<p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
 					<button className={`main-text ${styles.charge}`}>Charge customer</button>
 				</div>
-				<div className={styles.categories}>
+				<div className={`grid-container ${styles.categories}`}>
 					{
 						categoryArr.map(ctg =>
 							<div className={styles.categoryBox}>

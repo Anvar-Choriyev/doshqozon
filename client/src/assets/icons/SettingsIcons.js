@@ -23,7 +23,7 @@ const Settings = ({ mode }) => {
 				<path fill="url(#pattern0)" d="M0 0H24V24H0z"></path>
 			</mask>
 			<g mask="url(#mask0_121_904)">
-				<path fill="#FEBB1B" d="M0 0H24V24H0z"></path>
+				<path fill={mode || "#FEBB1B"} d="M0 0H24V24H0z"></path>
 			</g>
 			<defs>
 				<pattern

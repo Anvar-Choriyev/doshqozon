@@ -23,8 +23,8 @@ function App() {
 		<ToastContainer />
 		<Routes>
 			{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
-			<Route path='*' element={<Navigate to={'/'} />} />
 			<Route path="/menu/categories" element={<Categories />} />
+			<Route path='*' element={<Navigate to={'/'} />} />
 		</Routes>
 
 	</>
