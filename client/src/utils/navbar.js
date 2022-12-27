@@ -6,6 +6,7 @@ import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
 import Taomnoma from "../pages/Taomnoma/Taomnoma";
 import Xisobot from "../pages/Xisobot/Xisobot";
 import Login from "../pages/Login/Login";
+import Categories from "../pages/Categories/Categories";
 
 // icons
 import DashboardIcon from "../assets/icons/DashboardIcon";
@@ -27,17 +28,17 @@ const navbar = [
 		private: true,
 		hidden: false,
 	},
-	// {
-	// 	id: useId,
-	// 	element: <Taomnoma />,
-	// 	title: 'Taomnoma',
-	// 	path: '/taomnoma',
-	// 	icon(mode) {
-	// 		return <PanIcon mode={mode} />
-	// 	},
-	// 	private: true,
-	// 	hidden: false
-	// },
+	{
+		id: useId,
+		element: <Taomnoma />,
+		title: 'Taomnoma',
+		path: '/taomnoma',
+		icon(mode) {
+			return <PanIcon mode={mode} />
+		},
+		private: true,
+		hidden: false
+	},
 	{
 		id: useId,
 		element: <Sozlamalar />,

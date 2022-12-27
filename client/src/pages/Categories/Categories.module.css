@@ -1,0 +1,37 @@
+.mainText {
+    display: flex;
+    justify-content: space-between;
+	 align-items: center;
+    margin-bottom: 24px;
+}
+.charge {
+    width: 206px;
+    height: 48px;
+    color: var(--color_1);
+    padding: 12px 32px;
+    background-color:var(--color_3);
+    border-radius: 4px;
+}
+.categoryText {
+    color: var(--color_1);
+    margin-bottom: 24px;
+}
+.categories {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+.categories {}
+
+.categoryBox {
+    width: 335px;
+    height: 216px;
+    border-radius: 4px;
+    background-color: var(--color_3);
+    padding: 24px 107.5px 72px;
+    text-align: center;
+}
+.categoryBox p {
+    color: #000;
+}
+
