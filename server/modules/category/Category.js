@@ -3,7 +3,7 @@ const sequelize = require("../../core/config/database/database");
 const Food = require("../food/Food");
 
 const Category = sequelize.define(
-  "category",
+  "categories",
   {
     id: {
       type: DataTypes.INTEGER,
