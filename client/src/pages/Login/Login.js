@@ -7,8 +7,7 @@ import LoginMainIcon from "../../assets/icons/LoginMainIcon";
 import PasswordIcon from "../../assets/icons/PasswordIcon";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import http from "../../utils/axios-instance";
-
+import http from "../../utils/axios-instance"
 const schema = yup.object().shape({
 	username: yup
 		.string()

@@ -1,4 +1,4 @@
-import useId from '../hooks/useId';
+import useId from "../hooks/useId";
 
 // compnents
 import Asosiy from "../pages/Asosiy/Asosiy";
@@ -7,6 +7,7 @@ import Taomnoma from "../pages/Taomnoma/Taomnoma";
 import Xisobot from "../pages/Xisobot/Xisobot";
 import Login from "../pages/Login/Login";
 import Categories from "../pages/Categories/Categories";
+import CategoryItem from "../pages/Categories/CategoryItem/CategoryItem";
 
 // icons
 import DashboardIcon from "../assets/icons/DashboardIcon";
@@ -20,10 +21,10 @@ const navbar = [
 	{
 		id: useId,
 		element: <Asosiy />,
-		title: 'Asosiy',
-		path: '/',
-		icon(mode) {
-			return <DashboardIcon mode={mode} />
+		title: "Asosiy",
+		path: "/",
+		icon(type) {
+			return <DashboardIcon type={type} />;
 		},
 		private: true,
 		hidden: false,
@@ -31,44 +32,60 @@ const navbar = [
 	{
 		id: useId,
 		element: <Taomnoma />,
-		title: 'Taomnoma',
-		path: '/taomnoma',
-		icon(mode) {
-			return <PanIcon mode={mode} />
+		title: "Taomnoma",
+		path: "/taomnoma",
+		icon(type) {
+			return <DashboardIcon type={type} />;
 		},
 		private: true,
-		hidden: false
-	},
-	{
-		id: useId,
-		element: <Sozlamalar />,
-		title: 'Sozlamalar',
-		path: '/sozlamalar',
-		icon(mode) {
-			return <SettingsIcon mode={mode} />
-		},
-		private: true,
-		hidden: false
+		hidden: false,
 	},
 	{
 		id: useId,
 		element: <Xisobot />,
-		title: 'Xisobot',
-		path: '/xisobot',
-		icon(mode) {
-			return <ChequeIcon mode={mode} />
+		title: "Xisobot",
+		path: "/xisobot",
+		icon(type) {
+			return <DashboardIcon type={type} />;
 		},
 		private: true,
-		hidden: false
+		hidden: false,
+	},
+	{
+		id: useId,
+		element: <Sozlamalar />,
+		title: "Sozlamalar",
+		path: "/sozlamalar",
+		icon(type) {
+			return <DashboardIcon type={type} />;
+		},
+		private: true,
+		hidden: false,
 	},
 	{
 		id: useId,
 		element: <Login />,
-		title: 'Login',
-		path: '/Login',
+		title: "Login",
+		path: "/Login",
 		private: true,
-		hidden: true
+		hidden: true,
 	},
-]
+	{
+		id: useId,
+		element: <Categories />,
+		title: "CategoryItem",
+		path: "/menu/categories",
+		private: true,
+		hidden: true,
+	},
+	{
+		id: useId,
+		element: <CategoryItem />,
+		title: "CategoryItem",
+		path: "/menu/categories/:id",
+		private: true,
+		hidden: true,
+	},
+];
 
 export default navbar;

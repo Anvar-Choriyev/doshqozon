@@ -1,44 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as Close } from "./close.svg";
-import osh from "./osh.png";
-import qazi from "./qazi.png";
 import style from "./Content.module.css";
 
-const Content = ({ setOpen }) => {
-	const [disabled, setDisabled] = useState(true);
-
+const Content = (props) => {
 	return (
 		<section className={style.container}>
-			<Close className={style.close} onClick={() => setOpen(false)} />
+			<Close className={style.close} onClick={() => props.setOpen(false)} />
 			<div>
-				<img src={osh} alt="osh" />
-				<p>Andijon Oshi</p>
-				<p className={style.pText}>1kg</p>
-				<p className={style.pSum}>100 000 so'm</p>
+				<img src={props.img} alt="" />
+				<p>{props.name}</p>
+				<p className={style.pText}>
+					{props.number}
+					{/* 1kg */}
+				</p>
+				<p className={style.pSum}>
+					{props.sum}
+					{/* 100 000 so'm */}
+				</p>
 			</div>
-
-			<div className={style.item}>
-				<div className={style.imgDiv}>
-					<img src={qazi} alt="" />
-					<p>Qazi</p>
+			{props.item.map((i) => (
+				<div key={i.id}>
+					<div className={style.item}>
+						<div className={style.imgDiv}>
+							<img src={i.img} alt="" />
+							<p>{i.name}</p>
+						</div>
+						<div className={style.itemChange}>
+							<button className={style.buttonMinus}>-</button>
+							<p>1X</p>
+							<button className={style.buttonPlus}>+</button>
+						</div>
+					</div>
 				</div>
-				<div className={style.itemChange}>
-					<button className={style.buttonMinus}>-</button>
-					<p>1X</p>
-					<button className={style.buttonPlus}>+</button>
-				</div>
-			</div>
-			<div className={style.item}>
-				<div className={style.imgDiv}>
-					<img src={qazi} alt="" />
-					<p>Qazi</p>
-				</div>
-				<div className={style.itemChange}>
-					<button className={style.buttonMinus}>-</button>
-					<p>1X</p>
-					<button className={style.buttonPlus}>+</button>
-				</div>
-			</div>
+			))}
 		</section>
 	);
 };

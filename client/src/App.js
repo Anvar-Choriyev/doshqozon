@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Categories from "./pages/Categories/Categories";
 import navbar from "./utils/navbar";
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 
@@ -19,15 +20,15 @@ function App() {
 		//   isAuth: token?.trim().length > 0,
 		// });
 	}, [token]);
-	return (<>
-		<ToastContainer />
-		<Routes>
-			{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
-			<Route path="/menu/categories" element={<Categories />} />
-			<Route path='*' element={<Navigate to={'/'} />} />
-		</Routes>
-
-	</>
+	return (
+		<>
+			<ToastContainer />
+			<Routes>
+				{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
+				<Route path="/menu/categories" element={<Categories />} />
+				<Route path='*' element={<Navigate to={'/'} />} />
+			</Routes>
+		</>
 	);
 }
 

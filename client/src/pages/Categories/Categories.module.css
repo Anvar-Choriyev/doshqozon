@@ -24,12 +24,9 @@
     height: 216px;
     border-radius: 4px;
     background-color: var(--color_3);
-	 display: grid;
-	 place-items:center;
-    /* padding: 24px 107.5px 72px; */
+    padding: 24px 107.5px 72px;
     text-align: center;
 }
 .categoryBox p {
     color: #000;
 }
-
