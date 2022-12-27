@@ -1,6 +1,8 @@
 .mainText {
     display: flex;
     justify-content: space-between;
+	 align-items: center;
+    margin-bottom: 24px;
 }
 .charge {
     width: 206px;
@@ -15,12 +17,10 @@
     margin-bottom: 24px;
 }
 .categories {
-    display: flex;
-    gap: 23px;
-    flex-wrap: wrap;
 }
+.categories {}
+
 .categoryBox {
-    width: 335px;
     height: 216px;
     border-radius: 4px;
     background-color: var(--color_3);

@@ -8,24 +8,27 @@ import { useEffect } from "react";
 function App() {
 	const token = localStorage.getItem("token");
 	const user = localStorage.getItem("user");
-	const navigate=useNavigate()
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		if (!token) {
-		  navigate("/login");
+			navigate("/login");
 		}
 		// ctx.setAppData({
 		//   user: JSON.parse(user),
 		//   token,
 		//   isAuth: token?.trim().length > 0,
 		// });
-	  }, [token]);
-	return (<>
-      <ToastContainer />
-		<Routes>
-			{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
-			<Route path='*' element={<Navigate to={'/'} />} />
-		</Routes></>
+	}, [token]);
+	return (
+		<>
+			<ToastContainer />
+			<Routes>
+				{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
+				<Route path="/menu/categories" element={<Categories />} />
+				<Route path='*' element={<Navigate to={'/'} />} />
+			</Routes>
+		</>
 	);
 }
 
