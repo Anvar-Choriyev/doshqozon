@@ -64,7 +64,7 @@ const Categories = () => {
 					Charge customer
 				</button>
 			</div>
-			<div className={`grid-container ${styles.categories}`}>
+			<div className="grid-container">
 				{categoryArr.map((ctg) => (
 					<Card
 						key={ctg.id}
