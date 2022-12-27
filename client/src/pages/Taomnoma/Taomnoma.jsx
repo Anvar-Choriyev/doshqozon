@@ -5,9 +5,7 @@ import Categories from "../../pages/Categories/Categories";
 const Taomnoma = () => {
 	return (
 		<Layout>
-			{/* <h1 className='title'>Taomnoma</h1> */}
-			<Categories/>
-
+			<Categories />
 		</Layout>
 	)
 }

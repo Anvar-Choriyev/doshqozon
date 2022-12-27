@@ -2,6 +2,10 @@
 	flex:1 1 auto;
 	display:flex;
 	height: 100vh;
+
+	max-width:1440px;
+	margin:0 auto;
+	width:100%;
 }
 .layout__right{
 	flex:1 1 auto;
