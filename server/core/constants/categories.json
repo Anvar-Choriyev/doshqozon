@@ -6,17 +6,21 @@
     {
         "id": 2,
         "name": "Salatlar"
-},
-{"id": 3,
-"name": "Non"
-},
-{"id": 4,
-"name": "Qaynoq ichimliklar"
-},
-{"id": 5,
-"name": "Yaxna ichimliklar"
-},
-{"id": 6,
-"name": "Additional food"
-}
+    },
+    {   
+        "id": 3,
+        "name": "Non"
+    },
+    {   
+        "id": 4,
+        "name": "Qaynoq ichimliklar"
+    },
+    {   
+        "id": 5,
+        "name": "Yaxna ichimliklar"
+    },
+    {   
+        "id": 6,
+        "name": "Additional food"
+    }
 ]
