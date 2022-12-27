@@ -9,7 +9,6 @@ const Sidebar = ({ list }) => {
 	const navigate = useNavigate();
 	const location = useLocation();
 
-
 	function goToLogin() {
 		navigate('/login');
 	}

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -24,7 +24,7 @@ const schema = yup.object().shape({
 });
 
 function Login() {
-	const navigate=useNavigate()
+	const navigate = useNavigate()
 	const {
 		register,
 		handleSubmit,
@@ -72,13 +72,13 @@ function Login() {
 							<label htmlFor="username">
 								Login
 							</label>
-								<input
-									style={{ borderBottom: errors.username && "1px solid red" }}
-									type="text"
-									id="username"
-									name="username"
-									{...register("username")}
-								/>
+							<input
+								style={{ borderBottom: errors.username && "1px solid red" }}
+								type="text"
+								id="username"
+								name="username"
+								{...register("username")}
+							/>
 							{errors.username && (
 								<span style={{ color: "red" }}>{errors.username.message}</span>
 							)}
@@ -103,7 +103,7 @@ function Login() {
 									{...register("password")}
 								/>
 							</div>
-								
+
 							{errors.password && (
 								<span style={{ color: "red" }}>{errors.password.message}</span>
 							)}

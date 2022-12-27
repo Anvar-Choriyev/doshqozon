@@ -9,7 +9,6 @@
 	flex-direction:column;
 	padding:40px 20px;
 }
-
 .layout__child {
 	overflow-y:auto;
 	flex:1 1 auto;
