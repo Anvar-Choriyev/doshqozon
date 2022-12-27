@@ -1,8 +1,4 @@
 import styles from "./Categories.module.css";
-<<<<<<< HEAD
-import Layout from "../../components/Layout/Layout";
-=======
->>>>>>> 9528af4f1e313227fc48d43993e84e2920122c85
 import Meals from "../../assets/images/meals.png";
 import Bread from "../../assets/images/bread.png";
 import Salad from "../../assets/images/salad.png";
