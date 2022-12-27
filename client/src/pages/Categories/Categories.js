@@ -1,5 +1,4 @@
 import styles from "./Categories.module.css";
-import Layout from "../../components/Layout/Layout";
 import Meals from "../../assets/images/meals.png";
 import Bread from "../../assets/images/bread.png";
 import Salad from "../../assets/images/salad.png";
@@ -9,6 +8,7 @@ import { useEffect, useState } from "react";
 import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import Card from "../../components/Generics/Card/Card"
 
 const Categories = () => {
   const categoryImg = [
@@ -67,13 +67,7 @@ const Categories = () => {
       </div>
       <div className={styles.categories}>
         {categoryArr.map((ctg) => (
-          <div className={styles.categoryBox}>
-            {console.log(ctg)}
-            <img src={ctg.src} />
-            <p className="name-text">
-              <Link to={`/categories/${ctg.id}`}>{ctg.name}</Link>
-            </p>
-          </div>
+          <Card img={ctg.src} name={ctg.name} id={ctg.id} url={"/menu/categories"}/>
         ))}
       </div>
         </>

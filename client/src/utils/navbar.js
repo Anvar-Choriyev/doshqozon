@@ -66,12 +66,19 @@ const navbar = [
     private: true,
     hidden: true,
   },
-
+  {
+    id: useId,
+    element: <Categories />,
+    title: "CategoryItem",
+    path: "/menu/categories",
+    private: true,
+    hidden: true,
+  },
   {
     id: useId,
     element: <CategoryItem />,
     title: "CategoryItem",
-    path: "/categories/:id",
+    path: "/menu/categories/:id",
     private: true,
     hidden: true,
   },
