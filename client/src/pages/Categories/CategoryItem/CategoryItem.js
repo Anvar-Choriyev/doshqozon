@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import http from "../../../utils/axios-instance";
 import { toast } from "react-toastify";
+import style from "./CategoryItem.module.css"
 import { useParams } from "react-router-dom";
 import Layout from "../../../components/Layout/Layout";
 import Card from "../../../components/Generics/Card/Card";
@@ -25,9 +26,11 @@ const CategoryItem = () => {
   return (
     <>
       <Layout>
-        {categoryItem?.map((c) => (
+        <div className={style.container}>
+          {categoryItem.length>0?categoryItem?.map((c) => (
           <Card img={bred} name={c.name} number={c.number} price={c.price} />
-        ))}
+        )):"Malumot Mavjud Emas"}
+        </div>
       </Layout>
     </>
   );
