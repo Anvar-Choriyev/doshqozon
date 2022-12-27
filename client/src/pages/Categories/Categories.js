@@ -58,7 +58,7 @@ const Categories = () => {
     })
   );
   return (
-        <>
+      <>
       <div className={styles.mainText}>
         <p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
         <button className={`main-text ${styles.charge}`}>
@@ -70,7 +70,7 @@ const Categories = () => {
           <Card img={ctg.src} name={ctg.name} id={ctg.id} url={"/menu/categories"}/>
         ))}
       </div>
-        </>
+      </>
   );
 };
 
