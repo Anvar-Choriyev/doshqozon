@@ -2,48 +2,56 @@
     {
        "id": 1,
         "name": "Andijon oshi",
+        "measure": "1 pors",
         "price": 28000 ,
         "categoryId": 1
     },
     {
         "id": 2,
          "name": "Andijon oshi", 
+         "measure": "1 kilogramm",
          "price": 60000,
          "categoryId": 1 
      },
      {
         "id": 3,
          "name": "Toshkent to`y oshi",
+         "measure": "1 kilogramm",
          "price": 55000 ,
          "categoryId": 1
      },
      {
         "id": 4,
          "name": "Toshkent to`y oshi",
+         "measure": "1 pors",
          "price": 22000 ,
          "categoryId": 1
      },
      {
         "id": 5,
          "name": "Tuxum", 
+         "measure": "1 dona",
          "price":  1000,
          "categoryId": 6
      },
      {
         "id": 6,
          "name": "Qazi", 
+         "measure": "1 dona",
          "price":  4000,
          "categoryId": 6
      },
      {
         "id": 7,
-         "name": "Po`stdumba", 
+         "name": "Po`stdumba",
+         "measure": "1 dona", 
          "price":  4000,
          "categoryId": 6
      },
      {
         "id": 8,
          "name": "Til", 
+         "measure": "1 dona",
          "price":  5000,
          "categoryId": 6
      }]
