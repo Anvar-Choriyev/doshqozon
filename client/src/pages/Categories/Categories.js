@@ -7,6 +7,7 @@ import ColdDrinks from "../../assets/images/cold-drinks.png";
 import { useEffect, useState } from "react";
 import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import Card from "../../components/Generics/Card/Card"
 
 const Categories = () => {
