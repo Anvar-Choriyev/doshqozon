@@ -19,6 +19,11 @@ exports.getAllCategory = catchAsync(
 exports.getAllFoodsbyCategory = catchAsync(
   async (req, res, next) => {
     const { id } = req.params;
+
+    const findByCategory = await Category.findByPk(id, {
+      attributes: ["name"],
+    });
+
     const allFoodsbyCategory = await Food.findAndCountAll({
       where: {
         categoryId: { [Op.eq]: id },
@@ -28,7 +33,10 @@ exports.getAllFoodsbyCategory = catchAsync(
       status: "succes",
       message: `Kategoriyaga tegishli taomlar`,
       error: null,
-      data: [...allFoodsbyCategory.rows] ,
+      data: {
+        categoryName: findByCategory.name,
+        foodsArr: allFoodsbyCategory.rows,
+      },
     });
   }
 );
