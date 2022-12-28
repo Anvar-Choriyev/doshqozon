@@ -2,7 +2,7 @@
     {
        "id": 1,
         "name": "Andijon oshi",
-        "measure": "1 pors",
+        "measure": "1 portsiya",
         "price": 28000 ,
         "categoryId": 1
     },
@@ -23,7 +23,7 @@
      {
         "id": 4,
          "name": "Toshkent to`y oshi",
-         "measure": "1 pors",
+         "measure": "1 portsiya",
          "price": 22000 ,
          "categoryId": 1
      },

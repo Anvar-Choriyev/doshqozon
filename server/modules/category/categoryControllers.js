@@ -34,8 +34,8 @@ exports.getAllFoodsbyCategory = catchAsync(
       message: `Kategoriyaga tegishli taomlar`,
       error: null,
       data: {
-        catName: findByCategory,
-        food: [...allFoodsbyCategory.rows],
+        categoryName: findByCategory.name,
+        foodsArr: allFoodsbyCategory.rows,
       },
     });
   }
