@@ -21,6 +21,7 @@ const Food = sequelize.define(
   },
   {
     underscored: true,
+    timestamps: false,
   }
 );
 

@@ -17,6 +17,7 @@ const Category = sequelize.define(
   },
   {
     underscored: true,
+    timestamps: false,
   }
 );
 
