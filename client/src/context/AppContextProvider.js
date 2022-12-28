@@ -9,7 +9,7 @@ const defaultAppState = {
 	jwt: token,
 	user: user,
 	isAuth: token ? true : false,
-	// cart: {2:1, 5:2,},
+	items: [],
 }
 
 const AppContextProvider = (props) => {
@@ -27,6 +27,7 @@ const AppContextProvider = (props) => {
 		token: appState.token,
 		user: appState.user,
 		isAuth: appState.isAuth,
+		items: appState.items,
 		setAppData: setAppDataHandler,
 		onReset: restart,
 	}

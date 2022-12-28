@@ -3,7 +3,6 @@ import useId from "../hooks/useId";
 // compnents
 import Asosiy from "../pages/Asosiy/Asosiy";
 import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
-import Taomnoma from "../pages/Taomnoma/Taomnoma";
 import Xisobot from "../pages/Xisobot/Xisobot";
 import Login from "../pages/Login/Login";
 import Categories from "../pages/Categories/Categories";
@@ -15,38 +14,44 @@ import PanIcon from "../assets/icons/PanIcon";
 import ChequeIcon from '../assets/icons/ChequeIcon';
 import SettingsIcon from '../assets/icons/SettingsIcons';
 
-
-
 const navbar = [
 	{
 		id: useId,
 		element: <Asosiy />,
 		title: "Asosiy",
-		path: "/",
-		icon(type) {
-			return <DashboardIcon type={type} />;
+		path: "/asosiy",
+		icon(isDark) {
+			return <DashboardIcon isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
 	},
 	{
 		id: useId,
-		element: <Taomnoma />,
+		element: <Categories />,
 		title: "Taomnoma",
-		path: "/taomnoma",
-		icon(type) {
-			return <DashboardIcon type={type} />;
+		path: "/taomnoma/categories",
+		icon(isDark) {
+			return <PanIcon isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
+	},
+	{
+		id: useId,
+		element: <CategoryItem />,
+		title: "CategoryItem",
+		path: "/taomnoma/categories/:id",
+		private: true,
+		hidden: true,
 	},
 	{
 		id: useId,
 		element: <Xisobot />,
 		title: "Xisobot",
 		path: "/xisobot",
-		icon(type) {
-			return <DashboardIcon type={type} />;
+		icon(isDark) {
+			return <ChequeIcon isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
@@ -56,8 +61,8 @@ const navbar = [
 		element: <Sozlamalar />,
 		title: "Sozlamalar",
 		path: "/sozlamalar",
-		icon(type) {
-			return <DashboardIcon type={type} />;
+		icon(isDark) {
+			return <SettingsIcon isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
@@ -67,22 +72,6 @@ const navbar = [
 		element: <Login />,
 		title: "Login",
 		path: "/Login",
-		private: true,
-		hidden: true,
-	},
-	{
-		id: useId,
-		element: <Categories />,
-		title: "CategoryItem",
-		path: "/menu/categories",
-		private: true,
-		hidden: true,
-	},
-	{
-		id: useId,
-		element: <CategoryItem />,
-		title: "CategoryItem",
-		path: "/menu/categories/:id",
 		private: true,
 		hidden: true,
 	},

@@ -10,6 +10,7 @@ import bred from "./bred.png";
 const CategoryItem = () => {
 	const { id } = useParams();
 	const [categoryItem, setCategoryItem] = useState([]);
+	let categoryName;
 	useEffect(() => {
 		getAllCategoryItem();
 	}, []);
@@ -19,17 +20,18 @@ const CategoryItem = () => {
 				url: `/categories/${id}`,
 				method: "GET",
 			});
-			setCategoryItem(res.data.data);
+			setCategoryItem(res.data.data.foodsArr);
+			categoryName = res.data.data.categoryName;
 		} catch (error) {
 			toast.error(error.response.data.message);
 		}
 	};
 	return (
 		<>
-			<Layout>
+			<Layout innerRoute={categoryName}>
 				<div className={style.container}>
 					{categoryItem.length > 0 ? categoryItem?.map((c) => (
-						<Card img={bred} name={c.name} number={c.number} price={c.price} />
+						<Card img={bred} key={c.id} name={c.name} number={c.number} price={c.price} />
 					)) : "Malumot Mavjud Emas"}
 				</div>
 			</Layout>

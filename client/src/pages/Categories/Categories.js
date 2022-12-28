@@ -7,8 +7,8 @@ import ColdDrinks from "../../assets/images/cold-drinks.png";
 import { useEffect, useState } from "react";
 import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
-import Card from "../../components/Generics/Card/Card"
+import Card from "../../components/Generics/Card/Card";
+import Layout from "../../components/Layout/Layout";
 
 const Categories = () => {
 	const categoryImg = [
@@ -58,7 +58,7 @@ const Categories = () => {
 		})
 	);
 	return (
-		<>
+		<Layout>
 			<div className={styles.mainText}>
 				<p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
 				<button className={`main-text ${styles.charge}`}>
@@ -72,11 +72,11 @@ const Categories = () => {
 						img={ctg.src}
 						name={ctg.name}
 						id={ctg.id}
-						url={"/menu/categories"}
+						url={"/taomnoma/categories"}
 					/>
 				))}
 			</div>
-		</>
+		</Layout>
 	);
 };
 

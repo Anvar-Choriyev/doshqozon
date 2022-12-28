@@ -1,14 +1,15 @@
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
-import Categories from "./pages/Categories/Categories";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import navbar from "./utils/navbar";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 
+
 function App() {
 	const token = localStorage.getItem("token");
 	const user = localStorage.getItem("user");
-	const navigate = useNavigate()
+	const navigate = useNavigate();
+
 
 	useEffect(() => {
 		if (!token) {
@@ -25,8 +26,7 @@ function App() {
 			<ToastContainer />
 			<Routes>
 				{navbar.map(({ id, path, element }) => <Route key={id()} path={path} element={element} />)}
-				<Route path="/menu/categories" element={<Categories />} />
-				<Route path='*' element={<Navigate to={'/'} />} />
+				<Route path='*' element={<Navigate to={'/asosiy'} />} />
 			</Routes>
 		</>
 	);
