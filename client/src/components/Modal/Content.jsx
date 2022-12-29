@@ -18,12 +18,20 @@ const Content = (props) => {
 			toast.error(error.response.data.message);
 		}
 	};
+	
 	useEffect(() => {
 		!props.url && getAllCategories();
 	}, []);
+
+	function closeModal(e) {
+		e.stopPropagation();
+		props.setOpen(false);
+	}
+
 	return (
 		<section className={style.container}>
-			<Close className={style.close} onClick={() => props.setOpen(false)} />
+			<Close className={style.close} onClick={closeModal} />
+			{/* <Close className={style.close} onClick={() => props.setOpen(false)} /> */}
 			<div>
 				<img src={osh} alt="" />
 				<p>{categories?.mainFood?.name}</p>
