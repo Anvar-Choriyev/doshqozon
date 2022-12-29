@@ -68,7 +68,7 @@ const Categories = () => {
 			<div className="grid-container">
 				{categoryArr.map((ctg) => (
 					<Link key={ctg.id} to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
-						img={`https://img.alltor.me/img${ctg.imgUrl}`}
+						img={ctg.src}
 						name={ctg.name}
 					/></Link>
 				))}
