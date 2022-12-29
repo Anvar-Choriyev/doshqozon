@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import http from "../../utils/axios-instance";
 import osh from "./osh.png";
 import qazi from "./qazi.png";
+
 const Content = (props) => {
 	const [categories, setCategories] = useState([]);
 	const getAllCategories = async () => {
@@ -21,9 +22,16 @@ const Content = (props) => {
 	useEffect(() => {
 		!props.url && getAllCategories();
 	}, []);
+
+	function closeModal(e) {
+		e.stopPropagation();
+		props.setOpen(false);
+	}
+
 	return (
 		<section className={style.container}>
-			<Close className={style.close} onClick={() => props.setOpen(false)} />
+			<Close className={style.close} onClick={closeModal} />
+			{/* <Close className={style.close} onClick={() => props.setOpen(false)} /> */}
 			<div>
 				<img src={osh} alt="" />
 				<p>{categories?.mainFood?.name}</p>
