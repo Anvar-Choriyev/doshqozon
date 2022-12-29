@@ -28,7 +28,6 @@ const CategoryItem = () => {
       <Layout>
         <div className={style.container}>
           {categoryItem.length>0?categoryItem?.map((c) => {
-            console.log(c)
         return  <Card img={bred} id={c.id} name={c.name} number={c.number} price={c.price} />
         }):"Malumot Mavjud Emas"}
         </div>
