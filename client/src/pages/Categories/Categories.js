@@ -9,49 +9,72 @@ import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
 import Card from "../../components/Generics/Card/Card";
 import Layout from "../../components/Layout/Layout";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
-  const [categories, setCategories] = useState([]);
-  const getAllCategories = async () => {
-    try {
-      const res = await http({
-        url: "/categories",
-        method: "GET",
-      });
-      setCategories(res.data?.data);
-    } catch (error) {
-      toast.error(error.response.data.message);
-    }
-  };
-  useEffect(() => {
-    getAllCategories();
-  }, []);
-
-  return (
-    <Layout>
-      <div className={styles.mainText}>
-        <p className={`title ${styles.categoryText}`}>
-          Kategoriyalar
-        </p>
-        <button className={`main-text ${styles.charge}`}>
-          Charge customer
-        </button>
-      </div>
-      <div className="grid-container">
-        {categories?.map(ctg => (
-          <Link
-            key={ctg.id}
-            to={`/taomnoma/kategoriyalar/${ctg.id}`}>
-            <Card
-              img={`https://img.alltor.me/img${ctg.imgUrl}`}
-              name={ctg.name}
-            />
-          </Link>
-        ))}
-      </div>
-    </Layout>
-  );
+	const categoryImg = [
+		{
+			id: 1,
+			src: Meals,
+		},
+		{
+			id: 2,
+			src: Salad,
+		},
+		{
+			id: 3,
+			src: Bread,
+		},
+		{
+			id: 4,
+			src: HotDrinks,
+		},
+		{
+			id: 5,
+			src: ColdDrinks,
+		},
+	];
+	const [categories, setCategories] = useState([]);
+	const getAllCategories = async () => {
+		try {
+			const res = await http({
+				url: "/categories",
+				method: "GET",
+			});
+			setCategories(res.data?.data);
+		} catch (error) {
+			toast.error(error.response.data.message);
+		}
+	};
+	useEffect(() => {
+		getAllCategories();
+	}, []);
+	const categoryArr = [];
+	categoryImg.forEach((img) =>
+		categories?.forEach((ctg) => {
+			if (img.id === ctg.id) {
+				categoryArr.push({ src: img.src, name: ctg.name, id: ctg.id });
+			}
+		})
+	);
+	return (
+		<Layout>
+			<div className={styles.mainText}>
+				<p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
+				<button className={`main-text ${styles.charge}`}>
+					Charge customer
+				</button>
+			</div>
+			<div className="grid-container">
+				{categoryArr.map((ctg) => (
+					<Link key={ctg.id} to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
+						img={ctg.src}
+						name={ctg.name}
+					/></Link>
+				))}
+			</div>
+		</Layout>
+	);
 };
 
 export default Categories;
