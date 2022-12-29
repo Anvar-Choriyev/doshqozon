@@ -6,15 +6,15 @@ import Modal from "../../Modal/Modal";
 
 const Card = (props) => {
 	const [open, setOpen] = useState(false)
-	
+
 	return (
 		<div className={styles.card}>
 			<img src={props.img} alt="product" />
-				<span style={{cursor:"pointer"}} onClick={() => setOpen(true)} className={styles["product-name"]}>{props.name}</span>
+			<span style={{ cursor: "pointer" }} onClick={() => setOpen(true)} className={styles["product-name"]}>{props.name}</span>
 			<span className={styles["product-number"]}>
 				{props.number}
 			</span>
-			<span  className={styles["product-price"]}>{props.price}</span>
+			<span className={styles["product-price"]}>{props.price}</span>
 			{/* <button onClick={() => setOpen(true)}>Modal</button> */}
 			{open && <Modal children={<Content id={props.id} setOpen={setOpen} />} />}
 		</div>
