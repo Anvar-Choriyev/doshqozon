@@ -9,6 +9,7 @@ import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
 import Card from "../../components/Generics/Card/Card";
 import Layout from "../../components/Layout/Layout";
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
 	const categoryImg = [
@@ -40,7 +41,7 @@ const Categories = () => {
 				url: "/categories",
 				method: "GET",
 			});
-			setCategories(res.data.data);
+			setCategories(res.data?.data);
 		} catch (error) {
 			toast.error(error.response.data.message);
 		}
@@ -66,13 +67,11 @@ const Categories = () => {
 			</div>
 			<div className="grid-container">
 				{categoryArr.map((ctg) => (
-					<Card
+					<Link to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
 						key={ctg.id}
 						img={ctg.src}
 						name={ctg.name}
-						id={ctg.id}
-						url={"/taomnoma/katego'riya"}
-					/>
+					/></Link>
 				))}
 			</div>
 		</Layout>

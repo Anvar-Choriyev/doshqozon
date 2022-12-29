@@ -75,6 +75,22 @@ const navbar = [
 		private: true,
 		hidden: true,
 	},
+	{
+		id: useId,
+		element: <Categories />,
+		title: "Categories",
+		path: "/taomnoma/kategoriyalar",
+		private: true,
+		hidden: true,
+	},
+	{
+		id: useId,
+		element: <CategoryItem />,
+		title: "CategoryItem",
+		path: "/taomnoma/kategoriyalar/:id",
+		private: true,
+		hidden: true,
+	},
 ];
 
 export default navbar;
