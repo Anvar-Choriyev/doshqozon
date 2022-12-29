@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as Close } from "./close.svg";
+import { ReactComponent as Close } from "../../assets/icons/close.svg";
 import style from "./Content.module.css";
 import { toast } from "react-toastify";
 import http from "../../utils/axios-instance";
-import osh from "./osh.png";
-import qazi from "./qazi.png";
-
+import osh from "../../assets/images/osh.png";
+import qazi from "../../assets/images/qazi.png";
 const Content = (props) => {
 	const [categories, setCategories] = useState([]);
 	const getAllCategories = async () => {
@@ -19,6 +18,7 @@ const Content = (props) => {
 			toast.error(error.response.data.message);
 		}
 	};
+	
 	useEffect(() => {
 		!props.url && getAllCategories();
 	}, []);

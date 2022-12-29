@@ -5,8 +5,7 @@ import style from "./CategoryItem.module.css"
 import { useParams } from "react-router-dom";
 import Layout from "../../../components/Layout/Layout";
 import Card from "../../../components/Generics/Card/Card";
-import bred from "./bred.png";
-import { Link } from "react-router-dom";
+import Meals from "../../../assets/images/meals.png"
 
 const CategoryItem = () => {
 	const { id } = useParams();
@@ -33,7 +32,7 @@ const CategoryItem = () => {
 		<Layout innerRoute={categoryName}>
 			<div className={`grid-container ${style.container}`}>
 				{categoryItem.length > 0 ? categoryItem?.map((c) => (
-					<Card img={bred} key={c.id} id={c.id} name={c.name} number={c.measure} price={c.price} />
+					<Card img={Meals} key={c.id} id={c.id} name={c.name} number={c.measure} price={c.price} />
 				)) : "Malumot Mavjud Emas"}
 			</div>
 		</Layout>
