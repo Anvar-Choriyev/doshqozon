@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Layout from "../../../components/Layout/Layout";
 import Card from "../../../components/Generics/Card/Card";
 import bred from "./bred.png";
+import { Link } from "react-router-dom";
 
 const CategoryItem = () => {
 	const { id } = useParams();
