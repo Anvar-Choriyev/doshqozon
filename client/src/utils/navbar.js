@@ -1,6 +1,6 @@
 import useId from "../hooks/useId";
 
-// compnents
+// components
 import Asosiy from "../pages/Asosiy/Asosiy";
 import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
 import Xisobot from "../pages/Xisobot/Xisobot";

@@ -21,9 +21,7 @@ const start = async () => {
 		});
 
 		app.listen(PORT, () => {
-			console.log(
-				`Server started ${process.env.NODE_ENV} on port ${PORT}`
-			);
+			console.log(`Server started ${process.env.NODE_ENV} on port ${PORT}`);
 		});
 
 		initialData();
