@@ -16,7 +16,7 @@ const start = async () => {
   try {
     await db.authenticate();
     await db.sync({
-      //   force: true,
+      // force: true,
       // alter: true,
     });
 
