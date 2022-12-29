@@ -1,26 +1,32 @@
 [
     {
        "id": 1,
-        "name": "Taomlar"
+        "name": "Taomlar",
+        "imgUrl": "/2022-12/29/ztejvzqgfuz7wvnv3oq4qfl5v.png"
     },
     {
         "id": 2,
-        "name": "Salatlar"
+        "name": "Salatlar",
+        "imgUrl": "/2022-12/29/smq0gfsko27ehcj32gpnuag0q.png"
     },
     {   
         "id": 3,
-        "name": "Non"
+        "name": "Non",
+        "imgUrl": "/2022-12/29/qhupdt2c7r9ga6acysnqhs5q4.png"
     },
     {   
         "id": 4,
-        "name": "Qaynoq ichimliklar"
+        "name": "Qaynoq ichimliklar",
+        "imgUrl": "/2022-12/29/eanxef1dgv8skj0dijzo6hywj.png"
     },
     {   
         "id": 5,
-        "name": "Yaxna ichimliklar"
+        "name": "Yaxna ichimliklar",
+        "imgUrl": "/2022-12/29/d5dn0e2wj7nmd9kwru6ry0z9z.png"
     },
     {   
         "id": 6,
-        "name": "Additional food"
+        "name": "Additional food",
+        "imgUrl": "/2022-12/29/jelmuy6ke4xst3nojbqonrpe1.png"
     }
 ]
