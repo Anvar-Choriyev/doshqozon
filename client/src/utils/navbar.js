@@ -9,10 +9,10 @@ import Categories from "../pages/Categories/Categories";
 import CategoryItem from "../pages/Categories/CategoryItem/CategoryItem";
 
 // icons
-import DashboardIcon from "../assets/icons/DashboardIcon";
-import PanIcon from "../assets/icons/PanIcon";
-import ChequeIcon from '../assets/icons/ChequeIcon';
-import SettingsIcon from '../assets/icons/SettingsIcons';
+import Dashboard from "../assets/icons/Dashboard";
+import Pan from "../assets/icons/Pan";
+import Cheque from '../assets/icons/Cheque';
+import Settings from '../assets/icons/Settings';
 
 const navbar = [
 	{
@@ -21,7 +21,7 @@ const navbar = [
 		title: "Asosiy",
 		path: "/asosiy",
 		icon(isDark) {
-			return <DashboardIcon isDark={isDark} />;
+			return <Dashboard isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
@@ -31,7 +31,7 @@ const navbar = [
 		element: <Categories />,
 		title: "Taomnoma",
 		icon(isDark) {
-			return <PanIcon isDark={isDark} />;
+			return <Pan isDark={isDark} />;
 		},
 		path: "/taomnoma/kategoriyalar",
 		private: true,
@@ -45,7 +45,7 @@ const navbar = [
 		private: true,
 		hidden: true,
 		icon(isDark) {
-			return <SettingsIcon isDark={isDark} />;
+			return <Settings isDark={isDark} />;
 		},
 	},
 	{
@@ -54,7 +54,7 @@ const navbar = [
 		title: "Xisobot",
 		path: "/xisobot",
 		icon(isDark) {
-			return <ChequeIcon isDark={isDark} />;
+			return <Cheque isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
@@ -65,7 +65,7 @@ const navbar = [
 		title: "Sozlamalar",
 		path: "/sozlamalar",
 		icon(isDark) {
-			return <SettingsIcon isDark={isDark} />;
+			return <Settings isDark={isDark} />;
 		},
 		private: true,
 		hidden: false,
