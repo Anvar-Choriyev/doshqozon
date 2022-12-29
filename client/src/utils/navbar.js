@@ -30,10 +30,10 @@ const navbar = [
 		id: useId,
 		element: <Categories />,
 		title: "Taomnoma",
-		path: "/taomnoma/katego'riya",
 		icon(isDark) {
 			return <PanIcon isDark={isDark} />;
 		},
+		path: "/taomnoma/kategoriyalar",
 		private: true,
 		hidden: false,
 	},
@@ -41,9 +41,12 @@ const navbar = [
 		id: useId,
 		element: <CategoryItem />,
 		title: "CategoryItem",
-		path: "/taomnoma/katego'riya/:id",
+		path: "/taomnoma/kategoriyalar/:id",
 		private: true,
 		hidden: true,
+		icon(isDark) {
+			return <SettingsIcon isDark={isDark} />;
+		},
 	},
 	{
 		id: useId,
@@ -72,22 +75,6 @@ const navbar = [
 		element: <Login />,
 		title: "Login",
 		path: "/Login",
-		private: true,
-		hidden: true,
-	},
-	{
-		id: useId,
-		element: <Categories />,
-		title: "Categories",
-		path: "/taomnoma/kategoriyalar",
-		private: true,
-		hidden: true,
-	},
-	{
-		id: useId,
-		element: <CategoryItem />,
-		title: "CategoryItem",
-		path: "/taomnoma/kategoriyalar/:id",
 		private: true,
 		hidden: true,
 	},
