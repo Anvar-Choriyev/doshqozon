@@ -54,4 +54,19 @@
          "measure": "1 dona",
          "price":  5000,
          "categoryId": 6
-     }]
+     },
+     {
+        "id": 9,
+         "name": "Yopgan non", 
+         "measure": "1 dona",
+         "price":  3000,
+         "categoryId": 3
+     },
+     {
+        "id": 10,
+         "name": "Yog'li non", 
+         "measure": "1 dona",
+         "price":  4000,
+         "categoryId": 3
+     }
+]
