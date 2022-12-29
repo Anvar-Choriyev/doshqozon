@@ -30,7 +30,7 @@ const navbar = [
 		id: useId,
 		element: <Categories />,
 		title: "Taomnoma",
-		path: "/taomnoma/categories",
+		path: "/taomnoma/katego'riya",
 		icon(isDark) {
 			return <PanIcon isDark={isDark} />;
 		},
@@ -41,7 +41,7 @@ const navbar = [
 		id: useId,
 		element: <CategoryItem />,
 		title: "CategoryItem",
-		path: "/taomnoma/categories/:id",
+		path: "/taomnoma/katego'riya/:id",
 		private: true,
 		hidden: true,
 	},

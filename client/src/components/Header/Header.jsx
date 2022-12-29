@@ -1,6 +1,8 @@
 import styles from './Header.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import navbar from '../../utils/navbar';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 // components
 import Form from '../Generics/Form/Form';
@@ -18,7 +20,13 @@ const Header = ({ innerRoute }) => {
 	const pathname = useLocation().pathname;
 	const exactRoute = navbar.find(elem => pathname.includes(elem.path));
 	const exactPathName = exactRoute.title;
-	const exactInnerRoute = pathname.replace(exactPathName.toLowerCase(), '').replaceAll('/', '');
+	const exactInnerRoute = pathname.replace(`/${exactPathName.toLowerCase()}/`, '').replace('/', '').replace(/\d/ig, '');
+
+	const ctx = useContext(AppContext);
+
+	function logOut() {
+		ctx.onReset();
+	}
 
 	function goBack() {
 		navigate(-1);
@@ -44,6 +52,7 @@ const Header = ({ innerRoute }) => {
 							<Input placeholder='Search...' />
 						</div>
 					</Form>
+					<button className={`main-text`} onClick={logOut}>Log out</button>
 				</div>
 			</div>
 		</header>

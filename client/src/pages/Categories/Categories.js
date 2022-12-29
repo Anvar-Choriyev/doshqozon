@@ -34,7 +34,6 @@ const Categories = () => {
 		},
 	];
 	const [categories, setCategories] = useState([]);
-
 	const getAllCategories = async () => {
 		try {
 			const res = await http({
@@ -65,14 +64,14 @@ const Categories = () => {
 					Charge customer
 				</button>
 			</div>
-			<div className={`grid-container ${styles.categories}`}>
+			<div className="grid-container">
 				{categoryArr.map((ctg) => (
 					<Card
 						key={ctg.id}
 						img={ctg.src}
 						name={ctg.name}
 						id={ctg.id}
-						url={"/taomnoma/categories"}
+						url={"/taomnoma/katego'riya"}
 					/>
 				))}
 			</div>

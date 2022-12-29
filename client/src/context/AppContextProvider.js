@@ -24,10 +24,10 @@ const AppContextProvider = (props) => {
 	}
 
 	const context = {
-		token: appState.token,
-		user: appState.user,
-		isAuth: appState.isAuth,
-		items: appState.items,
+		token: appState?.token,
+		user: appState?.user,
+		isAuth: appState?.isAuth,
+		items: appState?.items,
 		setAppData: setAppDataHandler,
 		onReset: restart,
 	}
