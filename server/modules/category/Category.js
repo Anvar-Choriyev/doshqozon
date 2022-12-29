@@ -14,6 +14,7 @@ const Category = sequelize.define(
       type: DataTypes.STRING(50),
       allowNull: false,
     },
+    imgUrl: DataTypes.STRING,
   },
   {
     underscored: true,
