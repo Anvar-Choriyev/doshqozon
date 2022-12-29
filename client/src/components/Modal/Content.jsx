@@ -47,7 +47,7 @@ const Content = (props) => {
 				<div key={i.id}>
 					<div className={style.item}>
 						<div className={style.imgDiv}>
-							<img src={`https://img.alltor.me/img${i.url}`} alt="" />
+							<img height="64px" width="64px" src={`https://img.alltor.me/img${i.url}`} alt="" />
 							<p>{i.name}</p>
 						</div>
 						<div className={style.itemChange}>
