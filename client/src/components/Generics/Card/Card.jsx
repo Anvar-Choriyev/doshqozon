@@ -5,7 +5,8 @@ import Content from "../../Modal/Content";
 import Modal from "../../Modal/Modal";
 
 const Card = (props) => {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
+
 	return (
 		<div className={styles.card} style={{ cursor: "pointer" }} onClick={() => setOpen(true)}>
 			<img src={props.img} alt="product" />
