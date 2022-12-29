@@ -11,8 +11,7 @@ import { Link } from "react-router-dom";
 const CategoryItem = () => {
 	const { id } = useParams();
 	const [categoryItem, setCategoryItem] = useState([]);
-	let categoryName;
-
+	const [categoryName, setCategoryName] = useState('');
 	useEffect(() => {
 		getAllCategoryItem();
 	}, []);
@@ -23,22 +22,18 @@ const CategoryItem = () => {
 				url: `/categories/${id}`,
 				method: "GET",
 			});
-			console.log('hello')
-			console.log(res);
-
 			setCategoryItem(res.data.data.foodsArr);
-			categoryName = res.data.data.categoryName;
+			setCategoryName(res.data.data.categoryName);
 		} catch (error) {
-			console.log('hello2')
 			toast.error(error.response.data.message);
 		}
 	};
 
 	return (
 		<Layout innerRoute={categoryName}>
-			<div className={style.container}>
+			<div className={`grid-container ${style.container}`}>
 				{categoryItem.length > 0 ? categoryItem?.map((c) => (
-					<Card img={bred} key={c.id} name={c.name} number={c.number} price={c.price} />
+					<Card img={bred} key={c.id} id={c.id} name={c.name} number={c.measure} price={c.price} />
 				)) : "Malumot Mavjud Emas"}
 			</div>
 		</Layout>

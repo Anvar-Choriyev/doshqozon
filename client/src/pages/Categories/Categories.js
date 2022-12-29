@@ -67,8 +67,7 @@ const Categories = () => {
 			</div>
 			<div className="grid-container">
 				{categoryArr.map((ctg) => (
-					<Link to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
-						key={ctg.id}
+					<Link key={ctg.id} to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
 						img={ctg.src}
 						name={ctg.name}
 					/></Link>

@@ -1,6 +1,6 @@
 import useId from "../hooks/useId";
 
-// compnents
+// components
 import Asosiy from "../pages/Asosiy/Asosiy";
 import Sozlamalar from "../pages/Sozlamalar/Sozlamalar";
 import Xisobot from "../pages/Xisobot/Xisobot";
@@ -30,10 +30,10 @@ const navbar = [
 		id: useId,
 		element: <Categories />,
 		title: "Taomnoma",
-		path: "/taomnoma/kategoriyalar",
 		icon(isDark) {
 			return <PanIcon isDark={isDark} />;
 		},
+		path: "/taomnoma/kategoriyalar",
 		private: true,
 		hidden: false,
 	},
@@ -44,6 +44,9 @@ const navbar = [
 		path: "/taomnoma/kategoriyalar/:id",
 		private: true,
 		hidden: true,
+		icon(isDark) {
+			return <SettingsIcon isDark={isDark} />;
+		},
 	},
 	{
 		id: useId,
