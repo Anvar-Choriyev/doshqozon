@@ -7,8 +7,9 @@ import ColdDrinks from "../../assets/images/cold-drinks.png";
 import { useEffect, useState } from "react";
 import http from "../../utils/axios-instance";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
-import Card from "../../components/Generics/Card/Card"
+import Card from "../../components/Generics/Card/Card";
+import Layout from "../../components/Layout/Layout";
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
 	const categoryImg = [
@@ -40,7 +41,7 @@ const Categories = () => {
 				url: "/categories",
 				method: "GET",
 			});
-			setCategories(res.data.data);
+			setCategories(res.data?.data);
 		} catch (error) {
 			toast.error(error.response.data.message);
 		}
@@ -57,7 +58,7 @@ const Categories = () => {
 		})
 	);
 	return (
-		<>
+		<Layout>
 			<div className={styles.mainText}>
 				<p className={`title ${styles.categoryText}`}>Kategoriyalar</p>
 				<button className={`main-text ${styles.charge}`}>
@@ -66,16 +67,13 @@ const Categories = () => {
 			</div>
 			<div className="grid-container">
 				{categoryArr.map((ctg) => (
-					<Card
-						key={ctg.id}
+					<Link key={ctg.id} to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
 						img={ctg.src}
 						name={ctg.name}
-						id={ctg.id}
-						url={"/menu/categories"}
-					/>
+					/></Link>
 				))}
 			</div>
-		</>
+		</Layout>
 	);
 };
 

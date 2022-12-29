@@ -11,9 +11,8 @@ const SidebarList = ({ list, styles, location }) => {
 					<NavLink
 						to={path}
 						className={`subtitle ${styles['aside__link']}`}
-					// className={`subtitle ${styles['aside__link']} ${location.pathname === path ? 'active' : ''}`}
 					>
-						{location.pathname === path ? icon('#35383F') : icon()}
+						{location.pathname.includes(path) ? icon(true) : icon()}
 						<p>{title}</p>
 					</NavLink>
 				</li>

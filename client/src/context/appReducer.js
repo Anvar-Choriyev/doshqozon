@@ -11,7 +11,8 @@ const appReducer = (state, action) => {
 				token: "",
 				user: {},
 				isAuth: false,
-			}
+			},
+				localStorage.clear();
 		default: return state;
 	}
 }

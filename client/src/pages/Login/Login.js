@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,7 +7,8 @@ import LoginMainIcon from "../../assets/icons/LoginMainIcon";
 import PasswordIcon from "../../assets/icons/PasswordIcon";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import http from "../../utils/axios-instance"
+import http from "../../utils/axios-instance";
+import AppContext from "../../context/AppContext";
 const schema = yup.object().shape({
 	username: yup
 		.string()
@@ -24,7 +25,8 @@ const schema = yup.object().shape({
 });
 
 function Login() {
-	const navigate = useNavigate()
+	const ctx = useContext(AppContext);
+	const navigate = useNavigate();
 	const {
 		register,
 		handleSubmit,
@@ -45,11 +47,11 @@ function Login() {
 			});
 			localStorage.setItem("token", res.data.data.jwt);
 			localStorage.setItem("user", JSON.stringify(res.data.data.user));
-			// ctx.setAppData({
-			// 	user: JSON.parse(localStorage.getItem("user")),
-			// 	token: localStorage.getItem("token"),
-			// 	isAuth: true,
-			// });
+			ctx.setAppData({
+				user: JSON.parse(localStorage.getItem("user")),
+				token: localStorage.getItem("token"),
+				isAuth: true,
+			});
 			navigate("/");
 		} catch (error) {
 			console.log(error);

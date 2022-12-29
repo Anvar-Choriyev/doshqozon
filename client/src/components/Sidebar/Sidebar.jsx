@@ -1,17 +1,17 @@
 import styles from './Sidebar.module.css';
 import USER from '../../assets/images/user.jpg';
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
+
 import SidebarList from './SidebarList';
 
 
 const Sidebar = ({ list }) => {
-	const navigate = useNavigate();
 	const location = useLocation();
+	const { user } = useContext(AppContext);
 
-	function goToLogin() {
-		navigate('/login');
-	}
 	return (
 		<aside className={styles['aside']}>
 			<nav className={styles['aside__menu']}>
@@ -24,12 +24,12 @@ const Sidebar = ({ list }) => {
 					<img src={USER} alt='' />
 				</div>
 				<h3 className={styles["aside__user-title"]}>
-					Elbek Suyunov
+					{user?.name}
 				</h3>
 				<p className={`main-text ${styles["aside__user-desc"]}`}>
-					Waiter 4h 46m
+					{user?.userRole}
 				</p>
-				<button className={`main-text ${styles["aside__user-btn"]}`} onClick={goToLogin}>
+				<button className={`main-text ${styles["aside__user-btn"]}`}>
 					Open profile
 				</button>
 			</div>

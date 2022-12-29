@@ -1,5 +1,8 @@
 import styles from './Header.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
+import navbar from '../../utils/navbar';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 // components
 import Form from '../Generics/Form/Form';
@@ -12,11 +15,18 @@ import BellIcon from '../../assets/icons/BellIcon';
 import ClockIcon from '../../assets/icons/ClockIcon';
 import SearchIcon from '../../assets/icons/SearchIcon';
 
-
-const Header = ({ element, title }) => {
+const Header = ({ innerRoute }) => {
 	const navigate = useNavigate();
-	const location = useLocation();
-	// const pathName = location.pathname.slice(1);
+	const pathname = useLocation().pathname;
+	const exactRoute = navbar.find(elem => pathname.includes(elem.path));
+	const exactPathName = exactRoute.title;
+	const exactInnerRoute = pathname.replace(`/${exactPathName.toLowerCase()}/`, '').replace('/', '').replace(/\d/ig, '');
+
+	const ctx = useContext(AppContext);
+
+	function logOut() {
+		ctx.onReset();
+	}
 
 	function goBack() {
 		navigate(-1);
@@ -29,10 +39,9 @@ const Header = ({ element, title }) => {
 					<button className={styles['header__icon-wrapper']} onClick={goBack}>
 						<ArrowIcon />
 					</button>
-					<h4 className='subtitle light'>{element}</h4>
-					{/* <h4 className='subtitle light'>{pathName === '' ? 'Asosiy' : pathName}</h4> */}
+					<h4 className='subtitle light'>{exactPathName}</h4>
 					<ChervonIcon />
-					<h4 className='subtitle'>{title}</h4>
+					<h4 className='subtitle'>{innerRoute || exactInnerRoute}</h4>
 				</div>
 				<div className={styles['header__right']}>
 					<BellIcon />
@@ -43,6 +52,7 @@ const Header = ({ element, title }) => {
 							<Input placeholder='Search...' />
 						</div>
 					</Form>
+					<button className={`main-text`} onClick={logOut}>Log out</button>
 				</div>
 			</div>
 		</header>

@@ -1,5 +1,5 @@
 .aside{
-	flex:0 0 auto;
+	flex:0 0 355px;
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
@@ -33,6 +33,15 @@
 	left:50%;
 	top:0;
 	transform: translate(-50%, -50%);
+	width:64px;
+	height:64px;
+	border-radius:50%;
+	overflow: hidden;
+}
+.aside__user-pic img {
+	width:100%;
+	height: 100%;
+	object-fit:cover;
 }
 .aside__user-title{
 	font-size: 24px;
@@ -52,11 +61,5 @@
 @media(min-height:885px) {
 	.aside{
 		padding:100px 20px 160px 20px;
-	}
-}
-
-@media(min-width:1085px) {
-	.aside{
-		flex:0 0 355px;
 	}
 }

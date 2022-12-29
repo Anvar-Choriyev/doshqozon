@@ -1,14 +1,5 @@
-const DashboardIcon = ({ type }) => <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width="24"
-	height="24"
-	fill="none"
-	viewBox="0 0 24 24"
->
-	<path
-		fill={type || "#FEBB1B"}
-		d="M8 24H2.667A2.675 2.675 0 010 21.333V2.667C0 1.2 1.2 0 2.667 0H8c1.467 0 2.667 1.2 2.667 2.667v18.666C10.667 22.8 9.467 24 8 24zm8 0h5.333C22.8 24 24 22.8 24 21.333v-6.666C24 13.2 22.8 12 21.333 12H16a2.675 2.675 0 00-2.667 2.667v6.666C13.333 22.8 14.533 24 16 24zm8-17.333v-4C24 1.2 22.8 0 21.333 0H16a2.675 2.675 0 00-2.667 2.667v4c0 1.466 1.2 2.666 2.667 2.666h5.333C22.8 9.333 24 8.133 24 6.667z"
-	></path>
-</svg>
+import DASHBOARD_LIGHT from '../images/sidebar-icons/dashboard-light.svg';
+import DASHBOARD_DARK from '../images/sidebar-icons/dashboard-dark.svg';
 
+const DashboardIcon = ({ isDark }) => <img src={isDark ? DASHBOARD_DARK : DASHBOARD_LIGHT} alt="" />;
 export default DashboardIcon;

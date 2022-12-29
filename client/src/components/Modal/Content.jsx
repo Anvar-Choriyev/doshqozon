@@ -19,25 +19,23 @@ const Content = (props) => {
 		}
 	};
 	useEffect(() => {
-		!props.url&&getAllCategories();
+		!props.url && getAllCategories();
 	}, []);
 	return (
 		<section className={style.container}>
-			{console.log(categories)}
 			<Close className={style.close} onClick={() => props.setOpen(false)} />
 			<div>
 				<img src={osh} alt="" />
 				<p>{categories?.mainFood?.name}</p>
 				<p className={style.pText}>
-					{/* {categories?.mainFood?.number} */}
-					1kg
+					{props?.number}
 				</p>
 				<p className={style.pSum}>
 					{categories?.mainFood?.price}
 					{/* 100 000 so'm */}
 				</p>
 			</div>
-			{categories?categories?.extra?.additional?.map((i) => (
+			{categories ? categories?.extra?.additional?.map((i) => (
 				<div key={i.id}>
 					<div className={style.item}>
 						<div className={style.imgDiv}>
@@ -51,7 +49,7 @@ const Content = (props) => {
 						</div>
 					</div>
 				</div>
-			)):""}
+			)) : ""}
 		</section>
 	);
 };
