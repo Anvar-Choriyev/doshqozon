@@ -33,7 +33,7 @@ const Content = (props) => {
 			<Close className={style.close} onClick={closeModal} />
 			{/* <Close className={style.close} onClick={() => props.setOpen(false)} /> */}
 			<div>
-				<img src={osh} alt="" />
+				<img src={`https://img.alltor.me/img${categories?.mainFood?.url}`} alt="" />
 				<p>{categories?.mainFood?.name}</p>
 				<p className={style.pText}>
 					{props?.number}
@@ -47,7 +47,7 @@ const Content = (props) => {
 				<div key={i.id}>
 					<div className={style.item}>
 						<div className={style.imgDiv}>
-							<img src={qazi} alt="" />
+							<img height="64px" width="64px" src={`https://img.alltor.me/img${i.url}`} alt="" />
 							<p>{i.name}</p>
 						</div>
 						<div className={style.itemChange}>
