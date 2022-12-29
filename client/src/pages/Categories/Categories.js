@@ -53,7 +53,7 @@ const Categories = () => {
 	categoryImg.forEach((img) =>
 		categories?.forEach((ctg) => {
 			if (img.id === ctg.id) {
-				categoryArr.push({ src: img.src, name: ctg.name, id: ctg.id });
+				categoryArr.push({ src: img.src, name: ctg.name, id: ctg.id});
 			}
 		})
 	);
@@ -66,7 +66,7 @@ const Categories = () => {
 				</button>
 			</div>
 			<div className="grid-container">
-				{categoryArr.map((ctg) => (
+				{categories.map((ctg) => (
 					<Link key={ctg.id} to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
 						img={`https://img.alltor.me/img${ctg.imgUrl}`}
 						name={ctg.name}
