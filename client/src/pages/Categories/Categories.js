@@ -40,7 +40,7 @@ const Categories = () => {
 				url: "/categories",
 				method: "GET",
 			});
-			setCategories(res.data.data);
+			setCategories(res.data?.data);
 		} catch (error) {
 			toast.error(error.response.data.message);
 		}
@@ -66,13 +66,11 @@ const Categories = () => {
 			</div>
 			<div className="grid-container">
 				{categoryArr.map((ctg) => (
-					<Card
+					<Link to={`/taomnoma/kategoriyalar/${ctg.id}`}><Card
 						key={ctg.id}
 						img={ctg.src}
 						name={ctg.name}
-						id={ctg.id}
-						url={"/menu/categories"}
-					/>
+					/></Link>
 				))}
 			</div>
 		</>
