@@ -9,11 +9,11 @@ import Form from '../Generics/Form/Form';
 import Input from '../Generics/Input/Input';
 
 // icons
-import ArrowIcon from '../../assets/icons/ArraowIcon';
-import ChervonIcon from '../../assets/icons/ChervonIcon';
-import BellIcon from '../../assets/icons/BellIcon';
-import ClockIcon from '../../assets/icons/ClockIcon';
-import SearchIcon from '../../assets/icons/SearchIcon';
+import Arrow from '../../assets/icons/Arrow';
+import Chervon from '../../assets/icons/Chervon';
+import Bell from '../../assets/icons/Bell';
+import Clock from '../../assets/icons/Clock';
+import Search from '../../assets/icons/Search';
 
 const Header = ({ innerRoute }) => {
 	const navigate = useNavigate();
@@ -37,18 +37,18 @@ const Header = ({ innerRoute }) => {
 			<div className={styles['header__row']}>
 				<div className={styles['header__left']}>
 					<button className={styles['header__icon-wrapper']} onClick={goBack}>
-						<ArrowIcon />
+						<Arrow />
 					</button>
 					<h4 className='subtitle light'>{exactPathName}</h4>
-					<ChervonIcon />
+					<Chervon />
 					<h4 className='subtitle'>{innerRoute || exactInnerRoute}</h4>
 				</div>
 				<div className={styles['header__right']}>
-					<BellIcon />
-					<ClockIcon />
+					<Bell />
+					<Clock />
 					<Form>
 						<div className={styles['header__form-wrapper']}>
-							<SearchIcon />
+							<Search />
 							<Input placeholder='Search...' />
 						</div>
 					</Form>
